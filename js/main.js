@@ -66,12 +66,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const heartsBurst = document.getElementById('hearts-burst');
     const invitePhoto = document.getElementById('invite-photo');
 
-    // Foto de la invitación: img/cena.jpg → img/cena.png → img/yoshi.svg
+    // Foto de la invitación: img/yoshi.jpg → img/cena.jpg → img/cena.png → img/yoshi.svg
     const tryNextPhoto = () => {
         if (!invitePhoto.dataset.fallback) {
-            invitePhoto.dataset.fallback = 'png';
+            invitePhoto.dataset.fallback = 'cena';
+            invitePhoto.src = 'img/cena.jpg';
+        } else if (invitePhoto.dataset.fallback === 'cena') {
+            invitePhoto.dataset.fallback = 'cena-png';
             invitePhoto.src = 'img/cena.png';
-        } else if (invitePhoto.dataset.fallback === 'png') {
+        } else if (invitePhoto.dataset.fallback === 'cena-png') {
             invitePhoto.dataset.fallback = 'yoshi';
             invitePhoto.src = 'img/yoshi.svg';
         }
@@ -233,22 +236,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const updateDisplay = () => {
-        let displayStr = currentInput;
-        while (displayStr.length < config.maxDigits) {
-            displayStr += "_";
-        }
-        
-        let formatted = "";
-        for(let i = 0; i < displayStr.length; i++) {
-            formatted += displayStr[i];
-            if (i % 2 === 1 && i !== displayStr.length - 1) {
-                formatted += "   "; 
-            } else if (i !== displayStr.length - 1) {
-                formatted += " "; 
+        pwdDisplay.innerHTML = "";
+        for (let i = 0; i < config.maxDigits; i++) {
+            const span = document.createElement('span');
+            span.className = 'pwd-digit';
+            if (i < currentInput.length) {
+                span.textContent = currentInput[i];
+                // Se alumbran de verde solo si es correcta en esa posición
+                if (currentInput[i] === config.correctPassword[i]) {
+                    span.classList.add('correct');
+                } else {
+                    span.classList.add('wrong');
+                }
+            } else {
+                span.textContent = "_";
+            }
+            pwdDisplay.appendChild(span);
+            if (i % 2 === 1 && i !== config.maxDigits - 1) {
+                const space = document.createElement('span');
+                space.innerHTML = '&nbsp;&nbsp;&nbsp;';
+                pwdDisplay.appendChild(space);
+            } else if (i !== config.maxDigits - 1) {
+                const space = document.createElement('span');
+                space.innerHTML = '&nbsp;';
+                pwdDisplay.appendChild(space);
             }
         }
-        
-        pwdDisplay.textContent = formatted;
     };
 
     keys.forEach(key => {
