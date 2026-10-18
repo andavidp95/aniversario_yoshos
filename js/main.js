@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const stage4 = document.getElementById('stage-4');
     const btnReveal = document.getElementById('btn-reveal');
     const lyricsContainer = document.getElementById('lyrics-container');
-    const btnSkip = document.getElementById('btn-skip');
     const btnYes = document.getElementById('btn-yes');
     const footerQuestion = document.getElementById('footer-question');
     const yesResponse = document.getElementById('yes-response');
@@ -378,11 +377,6 @@ document.addEventListener('DOMContentLoaded', () => {
         stage3StartTime = performance.now();
         startStage3Track();
         requestAnimFrameId = requestAnimationFrame(syncLyrics);
-    });
-
-    btnSkip.addEventListener('click', (e) => {
-        e.stopPropagation();
-        endStage3();
     });
 
     // --- RESPUESTA "¡SÍ!" Y CORAZONES ---
