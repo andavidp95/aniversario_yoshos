@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Fiorella ♥ Nuestro Aniversario</title>
+    <meta name="description" content="Invitación especial: nuestra primera cena de aniversario.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ETAPA 1: Diálogo de Seguridad (Glassmorphism) -->
+    <section id="stage-1" class="stage active modern-theme">
+        
+        <!-- CONTROLES SUPERIORES (Música, Volumen y Ayuda) -->
+        <div class="top-controls">
+            
+            <!-- Grupo de Música (Botón + Flecha + Slider) -->
+            <div class="volume-container">
+                <button id="btn-music" class="icon-btn" title="Controlar Música">
+                    <svg id="icon-music-on" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18V5l12-2v13"></path>
+                        <circle cx="6" cy="18" r="3"></circle>
+                        <circle cx="18" cy="16" r="3"></circle>
+                    </svg>
+                    <svg id="icon-music-off" style="display: none;" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18V5l12-2v13"></path>
+                        <circle cx="6" cy="18" r="3"></circle>
+                        <circle cx="18" cy="16" r="3"></circle>
+                        <line x1="1" y1="1" x2="23" y2="23"></line>
+                    </svg>
+                </button>
+                
+                <button id="btn-volume-toggle" class="arrow-btn" title="Mostrar/Ocultar Volumen">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+
+                <div id="slider-wrapper" class="slider-wrapper">
+                    <input type="range" id="volume-slider" class="volume-slider" min="0" max="100" value="40" title="Volumen">
+                </div>
+            </div>
+
+            <!-- Botón de ayuda -->
+            <button id="btn-help" class="control-btn" title="Obtener Pista">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+            </button>
+
+            <div id="hint-popup" class="hint-popup">
+                <strong>Pista:</strong><br>La contraseña sigue la siguiente estructura [día][mes][año], cada sección tiene 2 números: es el día en que nos conocimos.
+            </div>
+        </div>
+
+        <!-- ONDAS DE FONDO ANIMADAS -->
+        <div class="wave-container">
+            <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path class="wave-path wave-1" fill="rgba(255, 255, 255, 0.05)" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                <path class="wave-path wave-2" fill="rgba(255, 255, 255, 0.1)" d="M0,128L60,149.3C120,171,240,213,360,202.7C480,192,600,128,720,117.3C840,107,960,149,1080,176C1200,203,1320,213,1380,218.7L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            </svg>
+        </div>
+
+        <div class="glass-panel">
+            <div class="dialog-screen">
+                <p id="dialog-text">Autenticación Requerida</p>
+                <div id="password-display" class="pwd-display">_ _   _ _   _ _</div>
+            </div>
+            
+            <div class="dialog-keypad">
+                <button class="glass-btn" data-num="1">1</button>
+                <button class="glass-btn" data-num="2">2</button>
+                <button class="glass-btn" data-num="3">3</button>
+                <button class="glass-btn" data-num="4">4</button>
+                <button class="glass-btn" data-num="5">5</button>
+                <button class="glass-btn" data-num="6">6</button>
+                <button class="glass-btn" data-num="7">7</button>
+                <button class="glass-btn" data-num="8">8</button>
+                <button class="glass-btn" data-num="9">9</button>
+                <button class="glass-btn btn-clear" id="btn-clear">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                </button>
+                <button class="glass-btn" data-num="0">0</button>
+                <button class="glass-btn btn-enter" id="btn-enter">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ETAPA 2: La Carta del Aniversario -->
+    <section id="stage-2" class="stage theater-theme hidden">
+        <div class="letter-container">
+            <!-- Sello de cera decorativo -->
+            <div class="wax-seal-decor"></div>
+            
+            <div class="letter-border">
+                <div class="letter-content">
+                    <h1 class="letter-title">Querida Fiore</h1>
+                    
+                    <div class="divider">
+                        <svg width="200" height="15" viewBox="0 0 200 15">
+                            <path d="M0,7 L80,7 L100,0 L120,7 L200,7" stroke="#aa7c11" fill="none" stroke-width="1.5"></path>
+                        </svg>
+                    </div>
+
+                    <p class="letter-body">
+                        Hace un año que empezó nuestra historia, y hoy celebramos nuestro primer aniversario. Antes de invitarte a una cena muy especial, quiero recordarte estas 9 razones por las que me enamoré de ti, y por las que cada día quiero estar a tu lado.
+                    </p>
+                </div>
+                
+                <button id="btn-reveal" class="ornate-btn">Ver</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ETAPA 3: Los 9 Motivos (Letras Dinámicas sincronizadas con JSON) -->
+    <section id="stage-3" class="stage duel-theme hidden">
+        
+        <!-- Efecto de luces teatrales (Spotlights) -->
+        <div class="spotlights">
+            <div class="spotlight left"></div>
+            <div class="spotlight right"></div>
+        </div>
+        
+        <!-- Cortinas para la transición de apertura -->
+        <div class="duel-curtain left"></div>
+        <div class="duel-curtain right"></div>
+
+        <div id="lyrics-container" class="lyrics-container">
+            <!-- Las etiquetas div con el texto del JSON o SVG se generarán aquí automáticamente -->
+        </div>
+
+        <button id="btn-skip" class="skip-btn" title="Saltar a la invitación">Saltar ≫</button>
+    </section>
+
+    <!-- ETAPA 4: La Invitación a la Cena (Final) -->
+    <section id="stage-4" class="stage anniversary-theme hidden">
+        <div id="hearts-burst" class="hearts-burst"></div>
+        <div class="invitation-card">
+            <div class="invitation-border">
+                
+                <div class="invitation-header">
+                    <h2 class="invitation-title">Cena de Aniversario</h2>
+                    <div class="divider">
+                        <svg width="150" height="15" viewBox="0 0 200 15">
+                            <path d="M0,7 L80,7 L100,0 L120,7 L200,7" stroke="#d4af37" fill="none" stroke-width="1.5"></path>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="invitation-body">
+                    <!-- Yoshi esperando con un corazón -->
+                    <div class="invitation-image-placeholder">
+                        <img src="img/yoshi.svg" alt="Yoshi con un corazón">
+                    </div>
+                    
+                    <div class="invitation-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Celebramos</span>
+                            <span class="detail-value gold-font">NUESTRO 1er AÑO</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Fecha y Hora</span>
+                            <span class="detail-value">Sábado 24 de Octubre | 5:00 PM</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Lugar</span>
+                            <span class="detail-value">Ponte bonita… yo paso por ti</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="invitation-footer">
+                    <p id="footer-question">¿Me acompañas, Fiore?</p>
+                    <button id="btn-yes" class="ornate-btn">¡Sí!</button>
+                    <p id="yes-response" class="yes-response hidden">¡Sabía que dirías que sí! Nos vemos muy pronto 💛</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" role="img" aria-label="Yoshi sosteniendo un corazón">
+    <defs>
+        <radialGradient id="bgGrad" cx="50%" cy="45%" r="75%">
+            <stop offset="0%" stop-color="#3a0d16"/>
+            <stop offset="60%" stop-color="#1a0509"/>
+            <stop offset="100%" stop-color="#0c0508"/>
+        </radialGradient>
+        <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ff7d95" stop-opacity="0.35"/>
+            <stop offset="55%" stop-color="#7a1030" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#7a1030" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="hpGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#ff758c"/>
+            <stop offset="100%" stop-color="#e0334c"/>
+        </linearGradient>
+        <path id="hp" d="M20 34 C 6 24, 2 16, 2 10 A 9 9 0 0 1 20 6 A 9 9 0 0 1 38 10 C 38 16, 34 24, 20 34 Z"/>
+        <path id="spark" d="M0,-10 Q2,-2 10,0 Q2,2 0,10 Q-2,2 -10,0 Q-2,-2 0,-10 Z"/>
+    </defs>
+
+    <rect width="480" height="360" fill="url(#bgGrad)"/>
+    <ellipse cx="240" cy="175" rx="215" ry="165" fill="url(#glow)"/>
+
+    <use href="#hp" transform="translate(58,48) scale(1.1)" fill="url(#hpGrad)" opacity="0.9"/>
+    <use href="#hp" transform="translate(390,42) scale(0.75)" fill="url(#hpGrad)" opacity="0.8"/>
+    <use href="#hp" transform="translate(418,170) scale(0.6)" fill="url(#hpGrad)" opacity="0.7"/>
+    <use href="#hp" transform="translate(34,186) scale(0.7)" fill="url(#hpGrad)" opacity="0.75"/>
+    <use href="#hp" transform="translate(400,296) scale(0.5)" fill="url(#hpGrad)" opacity="0.6"/>
+
+    <use href="#spark" transform="translate(112,96) scale(0.9)" fill="#fff" opacity="0.75"/>
+    <use href="#spark" transform="translate(364,124) scale(0.65)" fill="#fff" opacity="0.6"/>
+    <use href="#spark" transform="translate(88,306) scale(0.5)" fill="#ffd166" opacity="0.7"/>
+    <use href="#spark" transform="translate(352,330) scale(0.45)" fill="#ffd166" opacity="0.6"/>
+
+    <!-- Cola -->
+    <path d="M168,262 Q136,252 126,272 Q142,288 172,282 Z" fill="#58b647" stroke="#3f9636" stroke-width="3" stroke-linejoin="round"/>
+
+    <!-- Patas -->
+    <rect x="202" y="292" width="26" height="42" rx="13" fill="#58b647"/>
+    <rect x="252" y="292" width="26" height="42" rx="13" fill="#58b647"/>
+
+    <!-- Zapatos -->
+    <ellipse cx="210" cy="332" rx="37" ry="16" fill="#f2913d" stroke="#d97728" stroke-width="3"/>
+    <ellipse cx="270" cy="332" rx="37" ry="16" fill="#f2913d" stroke="#d97728" stroke-width="3"/>
+    <ellipse cx="204" cy="327" rx="16" ry="5" fill="#ffc38a" opacity="0.7"/>
+    <ellipse cx="264" cy="327" rx="16" ry="5" fill="#ffc38a" opacity="0.7"/>
+
+    <!-- Cuerpo -->
+    <ellipse cx="240" cy="255" rx="78" ry="62" fill="#58b647" stroke="#3f9636" stroke-width="4"/>
+
+    <!-- Panza -->
+    <ellipse cx="240" cy="268" rx="55" ry="48" fill="#fdf6e3"/>
+
+    <!-- Brazos -->
+    <path d="M178,240 Q166,285 205,305" fill="none" stroke="#58b647" stroke-width="26" stroke-linecap="round"/>
+    <path d="M302,240 Q314,285 274,305" fill="none" stroke="#58b647" stroke-width="26" stroke-linecap="round"/>
+
+    <!-- Corazón en las manos -->
+    <g transform="translate(219,298)">
+        <use href="#hp" transform="scale(1)" fill="url(#hpGrad)" stroke="#c22740" stroke-width="2"/>
+        <ellipse cx="13" cy="13" rx="6" ry="8" fill="#fff" opacity="0.3" transform="rotate(-20 13 13)"/>
+    </g>
+
+    <!-- Manos -->
+    <circle cx="212" cy="310" r="15" fill="#fdf6e3" stroke="#e8dcc2" stroke-width="2"/>
+    <circle cx="266" cy="310" r="15" fill="#fdf6e3" stroke="#e8dcc2" stroke-width="2"/>
+
+    <!-- Cresta (parte trasera de la cabeza) -->
+    <path d="M168,100 L136,84 L152,116 Z" fill="#58b647" stroke="#3f9636" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M150,132 L116,122 L138,150 Z" fill="#58b647" stroke="#3f9636" stroke-width="3" stroke-linejoin="round"/>
+
+    <!-- Cabeza -->
+    <ellipse cx="240" cy="155" rx="88" ry="78" fill="#58b647" stroke="#3f9636" stroke-width="4"/>
+
+    <!-- Hocico -->
+    <ellipse cx="240" cy="240" rx="40" ry="24" fill="#fdf6e3"/>
+    <path d="M220,246 Q240,260 260,246" fill="none" stroke="#2f7a2a" stroke-width="4.5" stroke-linecap="round"/>
+
+    <!-- Nariz -->
+    <ellipse cx="240" cy="200" rx="56" ry="38" fill="#58b647" stroke="#3f9636" stroke-width="4"/>
+    <ellipse cx="224" cy="190" rx="4.5" ry="6.5" fill="#2f7a2a" opacity="0.55"/>
+    <ellipse cx="256" cy="190" rx="4.5" ry="6.5" fill="#2f7a2a" opacity="0.55"/>
+    <ellipse cx="228" cy="178" rx="14" ry="7" fill="#7fce6b" opacity="0.5"/>
+
+    <!-- Ojos -->
+    <ellipse cx="205" cy="130" rx="30" ry="40" fill="#ffffff"/>
+    <ellipse cx="275" cy="130" rx="30" ry="40" fill="#ffffff"/>
+    <ellipse cx="214" cy="144" rx="11" ry="15" fill="#1a1a1a"/>
+    <ellipse cx="266" cy="144" rx="11" ry="15" fill="#1a1a1a"/>
+    <circle cx="218" cy="137" r="4" fill="#ffffff"/>
+    <circle cx="270" cy="137" r="4" fill="#ffffff"/>
+
+    <!-- Rubor -->
+    <ellipse cx="166" cy="200" rx="16" ry="9" fill="#ff8fab" opacity="0.5"/>
+    <ellipse cx="314" cy="200" rx="16" ry="9" fill="#ff8fab" opacity="0.5"/>
+
+    <!-- Moño -->
+    <path d="M240,276 L216,260 L216,292 Z" fill="#e0455a" stroke="#b73347" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M240,276 L264,260 L264,292 Z" fill="#e0455a" stroke="#b73347" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="240" cy="276" r="9" fill="#c73a4e" stroke="#b73347" stroke-width="2.5"/>
+</svg>
