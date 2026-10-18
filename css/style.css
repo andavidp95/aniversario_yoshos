@@ -211,10 +211,49 @@ body, html {
 
 /* --- ETAPA 1: GLASSMORPHISM --- */
 .modern-theme {
-    background-image: url('../img/background.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background:
+        radial-gradient(ellipse 80% 60% at 20% 15%, rgba(212, 75, 140, 0.35) 0%, transparent 55%),
+        radial-gradient(ellipse 70% 55% at 85% 25%, rgba(130, 60, 180, 0.35) 0%, transparent 55%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(255, 105, 135, 0.28) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 75% 75%, rgba(180, 80, 200, 0.22) 0%, transparent 55%),
+        linear-gradient(160deg, #1a0a22 0%, #2a0f2e 35%, #3d1035 65%, #1a0818 100%);
+    animation: bgBreathe 12s ease-in-out infinite alternate;
+}
+
+@keyframes bgBreathe {
+    0% { filter: hue-rotate(0deg) brightness(1); }
+    100% { filter: hue-rotate(12deg) brightness(1.08); }
+}
+
+/* Corazones flotantes románticos */
+.romantic-hearts {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.rh {
+    position: absolute;
+    bottom: -8%;
+    left: var(--x);
+    color: #ff6b9d;
+    font-size: var(--s);
+    opacity: 0;
+    animation: heartRise 11s linear var(--d) infinite;
+    text-shadow: 0 0 12px rgba(255, 107, 157, 0.6);
+}
+
+.rh:nth-child(3n) { color: #e080c0; }
+.rh:nth-child(3n+1) { color: #c084fc; }
+
+@keyframes heartRise {
+    0%   { transform: translateY(0) scale(0.6) rotate(0deg); opacity: 0; }
+    8%   { opacity: var(--o, 0.3); }
+    50%  { transform: translateY(-50vh) scale(1) rotate(12deg); opacity: var(--o, 0.3); }
+    92%  { opacity: 0; }
+    100% { transform: translateY(-108vh) scale(0.8) rotate(-10deg); opacity: 0; }
 }
 
 .wave-container {
