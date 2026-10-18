@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a0a4a"/>
+      <stop offset="28%" stop-color="#6b1e6e"/>
+      <stop offset="52%" stop-color="#c9286a"/>
+      <stop offset="72%" stop-color="#ff6b35"/>
+      <stop offset="88%" stop-color="#ffb347"/>
+      <stop offset="100%" stop-color="#ffe066"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff7b0" stop-opacity="1"/>
+      <stop offset="35%" stop-color="#ffd54f" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#ff8f00" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ff6f00" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sunCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fffde7"/>
+      <stop offset="60%" stop-color="#ffe082"/>
+      <stop offset="100%" stop-color="#ffb300"/>
+    </radialGradient>
+    <linearGradient id="mtnFar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a148c"/>
+      <stop offset="100%" stop-color="#311b52"/>
+    </linearGradient>
+    <linearGradient id="mtnNear" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2c0a3d"/>
+      <stop offset="100%" stop-color="#1a0525"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff8f00" stop-opacity="0.75"/>
+      <stop offset="30%" stop-color="#ad1457" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#4a148c" stop-opacity="0.85"/>
+    </linearGradient>
+    <filter id="blurGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- Cielo -->
+  <rect width="1600" height="900" fill="url(#sky)"/>
+
+  <!-- Estrellas (arriba) -->
+  <g fill="#fff" opacity="0.85">
+    <circle cx="120" cy="60" r="2"/><circle cx="260" cy="110" r="1.5"/>
+    <circle cx="400" cy="45" r="2.2"/><circle cx="540" cy="95" r="1.4"/>
+    <circle cx="700" cy="55" r="1.8"/><circle cx="860" cy="100" r="2"/>
+    <circle cx="1010" cy="40" r="1.5"/><circle cx="1150" cy="85" r="2.1"/>
+    <circle cx="1300" cy="50" r="1.6"/><circle cx="1450" cy="105" r="1.9"/>
+    <circle cx="1540" cy="60" r="1.4"/><circle cx="190" cy="150" r="1.3"/>
+    <circle cx="620" cy="160" r="1.2"/><circle cx="940" cy="150" r="1.5"/>
+    <circle cx="1240" cy="165" r="1.3"/><circle cx="780" cy="30" r="1.6"/>
+  </g>
+  <g fill="#ffd54f" opacity="0.9">
+    <circle cx="330" cy="80" r="1.8"/><circle cx="1080" cy="120" r="1.6"/>
+    <circle cx="1490" cy="140" r="1.5"/><circle cx="90" cy="120" r="1.4"/>
+  </g>
+
+  <!-- Nubes rosadas -->
+  <g opacity="0.55" filter="url(#soft)">
+    <ellipse cx="320" cy="250" rx="190" ry="38" fill="#ff8fab"/>
+    <ellipse cx="430" cy="235" rx="130" ry="30" fill="#ff6b9d"/>
+    <ellipse cx="1180" cy="220" rx="210" ry="42" fill="#ff9ec6"/>
+    <ellipse cx="1300" cy="240" rx="140" ry="32" fill="#ff7eb3"/>
+    <ellipse cx="760" cy="180" rx="160" ry="30" fill="#e091c8" opacity="0.7"/>
+  </g>
+
+  <!-- Sol poniente -->
+  <circle cx="800" cy="600" r="260" fill="url(#sunGlow)"/>
+  <circle cx="800" cy="600" r="110" fill="url(#sunCore)"/>
+  <circle cx="800" cy="600" r="70" fill="#fff9c4" opacity="0.9" filter="url(#blurGlow)"/>
+
+  <!-- Montañas lejanas -->
+  <path d="M0,620 L150,470 L280,560 L420,430 L560,540 L700,460 L830,530 L960,440 L1120,540 L1280,450 L1420,530 L1600,470 L1600,900 L0,900 Z" fill="url(#mtnFar)" opacity="0.9"/>
+
+  <!-- Montañas cercanas -->
+  <path d="M0,700 L180,560 L340,650 L520,540 L700,640 L860,560 L1040,650 L1220,555 L1400,645 L1600,580 L1600,900 L0,900 Z" fill="url(#mtnNear)"/>
+
+  <!-- Lago con reflejo -->
+  <ellipse cx="800" cy="780" rx="520" ry="90" fill="url(#lake)"/>
+  <ellipse cx="800" cy="770" rx="200" ry="26" fill="#ffe082" opacity="0.5" filter="url(#soft)"/>
+  <g stroke="#ffcc80" stroke-width="2" opacity="0.45">
+    <line x1="660" y1="760" x2="940" y2="760"/>
+    <line x1="700" y1="780" x2="900" y2="780"/>
+    <line x1="730" y1="800" x2="870" y2="800"/>
+  </g>
+
+  <!-- Pradera oscura al frente -->
+  <path d="M0,820 Q400,770 800,810 Q1200,850 1600,800 L1600,900 L0,900 Z" fill="#12041c"/>
+
+  <!-- Florecitas brillantes -->
+  <g opacity="0.9">
+    <circle cx="180" cy="845" r="4" fill="#ff6b9d"/>
+    <circle cx="180" cy="845" r="8" fill="#ff6b9d" opacity="0.25"/>
+    <circle cx="420" cy="860" r="3.5" fill="#ffd54f"/>
+    <circle cx="420" cy="860" r="7" fill="#ffd54f" opacity="0.25"/>
+    <circle cx="1150" cy="850" r="4" fill="#ce93d8"/>
+    <circle cx="1150" cy="850" r="8" fill="#ce93d8" opacity="0.25"/>
+    <circle cx="1380" cy="865" r="3.5" fill="#ff8a80"/>
+    <circle cx="1380" cy="865" r="7" fill="#ff8a80" opacity="0.25"/>
+  </g>
+
+  <!-- Pajaritos -->
+  <g stroke="#1a0525" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8">
+    <path d="M480,150 q12,-12 24,0 q12,-12 24,0"/>
+    <path d="M560,120 q9,-9 18,0 q9,-9 18,0"/>
+    <path d="M1080,160 q10,-10 20,0 q10,-10 20,0"/>
+  </g>
+</svg>

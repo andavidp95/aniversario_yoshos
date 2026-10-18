@@ -20,13 +20,20 @@ document.addEventListener('DOMContentLoaded', () => {
     bgMusic.loop = true;
     let isMusicPlaying = false;
 
-    // Audio de Shrek para la carta (song/shrek.mp3 si existe)
+    // Audio de Shrek/Accidentally in Love para la carta
     const shrekAudio = new Audio('song/shrek.mp3');
     shrekAudio.loop = true;
     let shrekReady = false;
     fetch('song/shrek.mp3', { method: 'HEAD' })
-        .then(r => { shrekReady = r.ok; })
-        .catch(() => { shrekReady = false; });
+        .then(r => {
+            if (r.ok) { shrekReady = true; return; }
+            shrekAudio.src = 'song/accidentally.mp3';
+            return fetch('song/accidentally.mp3', { method: 'HEAD' }).then(r2 => { shrekReady = r2.ok; });
+        })
+        .catch(() => {
+            shrekAudio.src = 'song/accidentally.mp3';
+            return fetch('song/accidentally.mp3', { method: 'HEAD' }).then(r2 => { shrekReady = r2.ok; }).catch(() => { shrekReady = false; });
+        });
 
     // Audio de la secuencia de la Etapa 3 (song/aniversario.mp3 si existe, si no title.mp3)
     const stage3Audio = new Audio();
