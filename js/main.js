@@ -65,6 +65,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const footerQuestion = document.getElementById('footer-question');
     const yesResponse = document.getElementById('yes-response');
     const heartsBurst = document.getElementById('hearts-burst');
+    const invitePhoto = document.getElementById('invite-photo');
+
+    // Foto de la invitación: img/cena.jpg → img/cena.png → img/yoshi.svg
+    const tryNextPhoto = () => {
+        if (!invitePhoto.dataset.fallback) {
+            invitePhoto.dataset.fallback = 'png';
+            invitePhoto.src = 'img/cena.png';
+        } else if (invitePhoto.dataset.fallback === 'png') {
+            invitePhoto.dataset.fallback = 'yoshi';
+            invitePhoto.src = 'img/yoshi.svg';
+        }
+    };
+    invitePhoto.addEventListener('error', tryNextPhoto);
+    if (invitePhoto.complete && invitePhoto.naturalWidth === 0) {
+        tryNextPhoto();
+    }
 
     // --- CARGAR EL JSON DE LAS LETRAS ---
     fetch('script.json')

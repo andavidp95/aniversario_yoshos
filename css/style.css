@@ -750,6 +750,58 @@ body, html {
     100% { transform: rotate(-2deg) scale(1) translateY(0); filter: drop-shadow(0 0 15px rgba(255,255,255,0.4)); }
 }
 
+/* --- STICKERS TIERNOS (ETAPA 1) --- */
+.sticker-zone {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.sticker {
+    position: absolute;
+    width: clamp(85px, 13vw, 145px);
+    height: auto;
+    filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.45));
+    animation: stickerFloat 6s ease-in-out infinite;
+}
+
+.sticker-1 {
+    left: 3%;
+    bottom: 16%;
+    transform: rotate(-4deg);
+}
+
+.sticker-2 {
+    right: 4%;
+    top: 10%;
+    width: clamp(75px, 11vw, 125px);
+    animation-duration: 7.5s;
+    animation-delay: 1s;
+    transform: rotate(3deg);
+}
+
+.sticker-3 {
+    right: 7%;
+    bottom: 22%;
+    width: clamp(70px, 10vw, 115px);
+    animation-duration: 5.5s;
+    animation-delay: 0.5s;
+    transform: rotate(-2deg);
+}
+
+@keyframes stickerFloat {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -14px; }
+}
+
+@media (max-width: 600px) {
+    .sticker-1 { left: -2%; bottom: 12%; width: 90px; }
+    .sticker-2 { right: -2%; top: 8%; width: 80px; }
+    .sticker-3 { right: 2%; bottom: 14%; width: 75px; }
+}
+
 /* --- ETAPA 4: LA INVITACIÓN ELEGANTE --- */
 .anniversary-theme {
     background: radial-gradient(circle at center, #1a0202 0%, var(--bg-black) 80%);

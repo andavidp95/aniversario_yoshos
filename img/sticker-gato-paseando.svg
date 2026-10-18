@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200" role="img" aria-label="Gatito paseando">
+    <!-- Respaldo blanco estilo sticker -->
+    <g stroke="#ffffff" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" fill="#ffffff">
+        <path d="M48,118 Q12,86 32,48" fill="none" stroke-width="30"/>
+        <ellipse cx="105" cy="120" rx="72" ry="48"/>
+        <circle cx="175" cy="88" rx="52" ry="52"/>
+        <path d="M138,58 L152,14 L182,48 Z"/>
+        <path d="M206,44 L232,16 L240,62 Z"/>
+        <rect x="66" y="140" width="24" height="42" rx="12"/>
+        <rect x="96" y="144" width="24" height="40" rx="12"/>
+        <rect x="146" y="142" width="24" height="42" rx="12"/>
+        <rect x="172" y="146" width="24" height="38" rx="12"/>
+    </g>
+
+    <!-- Cola -->
+    <path d="M48,118 Q12,86 32,48" fill="none" stroke="#f5a555" stroke-width="18" stroke-linecap="round"/>
+    <path d="M36,72 l10,4 M28,96 l11,3" stroke="#e08a3c" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Patas -->
+    <g fill="#f5a555" stroke="#d98a35" stroke-width="3">
+        <rect x="66" y="140" width="24" height="42" rx="12"/>
+        <rect x="96" y="144" width="24" height="40" rx="12"/>
+        <rect x="146" y="142" width="24" height="42" rx="12"/>
+        <rect x="172" y="146" width="24" height="38" rx="12"/>
+    </g>
+    <g fill="#fff3e0">
+        <ellipse cx="78" cy="176" rx="12" ry="8"/>
+        <ellipse cx="108" cy="180" rx="12" ry="8"/>
+        <ellipse cx="158" cy="178" rx="12" ry="8"/>
+        <ellipse cx="184" cy="180" rx="12" ry="8"/>
+    </g>
+
+    <!-- Cuerpo -->
+    <ellipse cx="105" cy="120" rx="66" ry="44" fill="#f5a555" stroke="#d98a35" stroke-width="3"/>
+    <path d="M70,88 Q76,102 70,116 M90,82 Q96,98 90,112 M110,80 Q116,96 110,110" fill="none" stroke="#e08a3c" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Orejas -->
+    <path d="M138,58 L152,14 L182,48 Z" fill="#f5a555" stroke="#d98a35" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M148,52 L156,28 L172,46 Z" fill="#ffb6c1"/>
+    <path d="M206,44 L232,16 L240,62 Z" fill="#f5a555" stroke="#d98a35" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M212,46 L226,28 L232,52 Z" fill="#ffb6c1"/>
+
+    <!-- Cabeza -->
+    <circle cx="175" cy="88" r="46" fill="#f5a555" stroke="#d98a35" stroke-width="3"/>
+    <path d="M162,54 l-3,12 M175,50 l0,12 M188,54 l3,12" stroke="#e08a3c" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Cara (ojos cerrados felices) -->
+    <path d="M152,86 Q160,76 168,86" fill="none" stroke="#2a2a2a" stroke-width="5" stroke-linecap="round"/>
+    <path d="M186,86 Q194,76 202,86" fill="none" stroke="#2a2a2a" stroke-width="5" stroke-linecap="round"/>
+    <path d="M171,100 L179,100 L175,106 Z" fill="#ff7b9c"/>
+    <path d="M175,106 Q170,113 164,109 M175,106 Q180,113 186,109" fill="none" stroke="#2a2a2a" stroke-width="3.5" stroke-linecap="round"/>
+    <ellipse cx="150" cy="102" rx="8" ry="5" fill="#ff9fb3" opacity="0.7"/>
+    <ellipse cx="202" cy="102" rx="8" ry="5" fill="#ff9fb3" opacity="0.7"/>
+    <g stroke="#d98a35" stroke-width="2.5" stroke-linecap="round">
+        <path d="M138,92 L120,88 M138,100 L120,102 M212,92 L230,88 M212,100 L230,102"/>
+    </g>
+</svg>

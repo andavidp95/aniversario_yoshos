@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 230" width="200" height="230" role="img" aria-label="Gatito escuchando música con audífonos">
+    <!-- Respaldo blanco estilo sticker -->
+    <g stroke="#ffffff" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" fill="#ffffff">
+        <path d="M150,180 Q182,190 174,156" fill="none" stroke-width="28"/>
+        <ellipse cx="100" cy="165" rx="56" ry="46"/>
+        <circle cx="100" cy="92" r="56"/>
+        <path d="M58,62 L72,22 L102,56 Z"/>
+        <path d="M142,62 L128,22 L98,56 Z"/>
+        <path d="M52,88 Q100,20 148,88" fill="none" stroke-width="26"/>
+        <rect x="28" y="78" width="34" height="48" rx="17"/>
+        <rect x="138" y="78" width="34" height="48" rx="17"/>
+    </g>
+
+    <!-- Cola -->
+    <path d="M150,180 Q182,190 174,156" fill="none" stroke="#7f88b8" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- Cuerpo -->
+    <ellipse cx="100" cy="165" rx="50" ry="42" fill="#7f88b8" stroke="#5d6590" stroke-width="3"/>
+    <ellipse cx="100" cy="172" rx="28" ry="28" fill="#fffdf8"/>
+    <circle cx="80" cy="198" r="13" fill="#fffdf8" stroke="#d8d4c8" stroke-width="2.5"/>
+    <circle cx="120" cy="198" r="13" fill="#fffdf8" stroke="#d8d4c8" stroke-width="2.5"/>
+
+    <!-- Orejas -->
+    <path d="M58,62 L72,22 L102,56 Z" fill="#7f88b8" stroke="#5d6590" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M66,56 L74,34 L90,52 Z" fill="#ffb6c1"/>
+    <path d="M142,62 L128,22 L98,56 Z" fill="#7f88b8" stroke="#5d6590" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M134,56 L126,34 L110,52 Z" fill="#ffb6c1"/>
+
+    <!-- Audífonos -->
+    <path d="M48,90 Q100,22 152,90" fill="none" stroke="#2f3238" stroke-width="12" stroke-linecap="round"/>
+    <rect x="28" y="78" width="34" height="48" rx="17" fill="#2f3238"/>
+    <rect x="138" y="78" width="34" height="48" rx="17" fill="#2f3238"/>
+    <circle cx="45" cy="102" r="8" fill="#55efc4"/>
+    <circle cx="155" cy="102" r="8" fill="#55efc4"/>
+
+    <!-- Cara -->
+    <circle cx="100" cy="92" r="46" fill="#7f88b8" stroke="#5d6590" stroke-width="3"/>
+    <ellipse cx="100" cy="108" rx="28" ry="18" fill="#fffdf8"/>
+    <path d="M74,88 Q82,78 90,88" fill="none" stroke="#2a2a2a" stroke-width="5" stroke-linecap="round"/>
+    <path d="M110,88 Q118,78 126,88" fill="none" stroke="#2a2a2a" stroke-width="5" stroke-linecap="round"/>
+    <path d="M94,102 L106,102 L100,109 Z" fill="#ff7b9c"/>
+    <path d="M100,109 Q94,117 88,112 M100,109 Q106,117 112,112" fill="none" stroke="#2a2a2a" stroke-width="3.5" stroke-linecap="round"/>
+    <ellipse cx="72" cy="104" rx="8" ry="5" fill="#ff9fb3" opacity="0.65"/>
+    <ellipse cx="128" cy="104" rx="8" ry="5" fill="#ff9fb3" opacity="0.65"/>
+
+    <!-- Notas musicales -->
+    <g fill="#ffd166" stroke="#e0a83a" stroke-width="1.5">
+        <g transform="translate(20,42)">
+            <ellipse cx="0" cy="14" rx="7" ry="5.5"/>
+            <path d="M6,14 L6,-8 L16,-12 L16,-4 L10,-1 L10,14" />
+        </g>
+        <g transform="translate(168,36) scale(0.9)">
+            <ellipse cx="0" cy="14" rx="7" ry="5.5"/>
+            <path d="M6,14 L6,-8 L16,-12 L16,-4 L10,-1 L10,14"/>
+        </g>
+    </g>
+    <g fill="#ffffff" opacity="0.9">
+        <g transform="translate(178,96) scale(0.75)">
+            <ellipse cx="0" cy="14" rx="7" ry="5.5"/>
+            <path d="M6,14 L6,-8 L16,-12 L16,-4 L10,-1 L10,14"/>
+        </g>
+        <circle cx="16" cy="90" r="3.5"/>
+        <circle cx="30" cy="118" r="2.5"/>
+    </g>
+</svg>
