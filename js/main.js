@@ -20,6 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
     bgMusic.loop = true;
     let isMusicPlaying = false;
 
+    // Audio de Shrek para la carta (song/shrek.mp3 si existe)
+    const shrekAudio = new Audio('song/shrek.mp3');
+    shrekAudio.loop = true;
+    let shrekReady = false;
+    fetch('song/shrek.mp3', { method: 'HEAD' })
+        .then(r => { shrekReady = r.ok; })
+        .catch(() => { shrekReady = false; });
+
     // Audio de la secuencia de la Etapa 3 (song/aniversario.mp3 si existe, si no title.mp3)
     const stage3Audio = new Audio();
     stage3Audio.loop = true;
@@ -172,6 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     bgMusic.volume = volumeSlider.value / 100;
     stage3Audio.volume = volumeSlider.value / 100;
+    shrekAudio.volume = volumeSlider.value / 100;
 
     const initMusic = () => {
         if (!isMusicPlaying && bgMusic.volume > 0) {
@@ -194,6 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const val = e.target.value;
         bgMusic.volume = val / 100;
         stage3Audio.volume = val / 100;
+        shrekAudio.volume = val / 100;
         
         if (val == 0) {
             iconMusicOn.style.display = 'none';
@@ -306,6 +316,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 stage2.classList.remove('hidden');
                 stage2.classList.add('active');
+
+                // Suena Shrek en la carta si el archivo existe
+                if (shrekReady) {
+                    shrekAudio.currentTime = 0;
+                    shrekAudio.play().catch(e => console.log(e));
+                }
             }, 1500);
         } else {
             errorSound.currentTime = 0;
@@ -380,6 +396,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     btnReveal.addEventListener('click', () => {
+        shrekAudio.pause();
+
         stage2.classList.remove('active');
         stage2.classList.add('hidden');
         
