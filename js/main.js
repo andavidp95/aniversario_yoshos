@@ -429,6 +429,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 colors[Math.floor(Math.random() * colors.length)]
             );
         }
+
+        const waMsg = encodeURIComponent("¡Sí! Acepto tu invitación a nuestra cena de aniversario ❤️");
+        setTimeout(() => {
+            window.open(`https://wa.me/593986092411?text=${waMsg}`, '_blank');
+        }, 900);
     });
 
     updateDisplay();

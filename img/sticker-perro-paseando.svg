@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 200">
+  <!-- Perrito blanco paseando -->
+  <ellipse cx="110" cy="184" rx="58" ry="8" fill="rgba(0,0,0,0.18)"/>
+  <!-- Cola -->
+  <path d="M162 120 Q190 108 184 84 Q180 70 170 76 Q178 96 158 112" fill="#fff"/>
+  <path d="M162 120 Q190 108 184 84 Q180 70 170 76 Q178 96 158 112" fill="none" stroke="#e0d0c0" stroke-width="1.5"/>
+  <!-- Cuerpo -->
+  <ellipse cx="112" cy="132" rx="52" ry="36" fill="#fff"/>
+  <ellipse cx="140" cy="118" rx="16" ry="12" fill="#c9a882" opacity="0.8"/>
+  <!-- Patas caminando -->
+  <ellipse cx="76" cy="164" rx="11" ry="16" fill="#fff" transform="rotate(15 76 164)"/>
+  <ellipse cx="100" cy="168" rx="11" ry="14" fill="#f5ebe0"/>
+  <ellipse cx="130" cy="166" rx="11" ry="15" fill="#fff" transform="rotate(-12 130 166)"/>
+  <ellipse cx="150" cy="164" rx="11" ry="16" fill="#f5ebe0" transform="rotate(-20 150 164)"/>
+  <!-- Correa -->
+  <path d="M78 112 Q70 130 74 150" stroke="#ff5a7a" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Orejas -->
+  <ellipse cx="64" cy="66" rx="17" ry="32" fill="#e8d5c0" transform="rotate(-15 64 66)"/>
+  <ellipse cx="124" cy="64" rx="17" ry="32" fill="#e8d5c0" transform="rotate(15 124 64)"/>
+  <!-- Cabeza -->
+  <circle cx="94" cy="76" r="40" fill="#fff"/>
+  <!-- Mancha ojo -->
+  <ellipse cx="110" cy="68" rx="15" ry="17" fill="#c9a882" opacity="0.75"/>
+  <!-- Ojos -->
+  <circle cx="80" cy="74" r="7" fill="#2d1b0e"/>
+  <circle cx="110" cy="72" r="7" fill="#2d1b0e"/>
+  <circle cx="82" cy="71" r="2.6" fill="#fff"/>
+  <circle cx="112" cy="69" r="2.6" fill="#fff"/>
+  <!-- Nariz y hocico -->
+  <ellipse cx="94" cy="94" rx="16" ry="12" fill="#f5ebe0"/>
+  <ellipse cx="94" cy="88" rx="5" ry="3.5" fill="#2d1b0e"/>
+  <path d="M88 96 Q94 102 100 96" stroke="#2d1b0e" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Lengua -->
+  <ellipse cx="94" cy="106" rx="4.5" ry="6.5" fill="#ff7a8a"/>
+  <!-- Rubor -->
+  <ellipse cx="66" cy="88" rx="7" ry="4.5" fill="#ffb3c1" opacity="0.7"/>
+  <ellipse cx="120" cy="86" rx="7" ry="4.5" fill="#ffb3c1" opacity="0.7"/>
+  <!-- Huella flotante -->
+  <g transform="translate(178,140) scale(0.55)" opacity="0.85">
+    <circle cx="0" cy="4" r="9" fill="#ff9eb5"/>
+    <circle cx="-8" cy="-9" r="4" fill="#ff9eb5"/>
+    <circle cx="0" cy="-12" r="4" fill="#ff9eb5"/>
+    <circle cx="8" cy="-9" r="4" fill="#ff9eb5"/>
+  </g>
+</svg>

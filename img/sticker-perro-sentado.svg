@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Perrito kawaii sentado -->
+  <ellipse cx="100" cy="184" rx="50" ry="8" fill="rgba(0,0,0,0.18)"/>
+  <!-- Cola -->
+  <path d="M140 150 Q168 140 162 112 Q158 96 148 102 Q156 122 136 138" fill="#b98a5a"/>
+  <!-- Cuerpo sentado -->
+  <path d="M60 178 Q55 130 70 110 Q85 92 100 92 Q115 92 130 110 Q145 130 140 178 Z" fill="#c9996a"/>
+  <!-- Patas traseras -->
+  <ellipse cx="72" cy="172" rx="16" ry="11" fill="#b98a5a"/>
+  <ellipse cx="128" cy="172" rx="16" ry="11" fill="#b98a5a"/>
+  <!-- Patas delanteras -->
+  <ellipse cx="88" cy="168" rx="11" ry="14" fill="#d9aa7a"/>
+  <ellipse cx="112" cy="168" rx="11" ry="14" fill="#d9aa7a"/>
+  <path d="M84 162 L84 174 M88 161 L88 175 M92 162 L92 174" stroke="#a87a4a" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M108 162 L108 174 M112 161 L112 175 M116 162 L116 174" stroke="#a87a4a" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Pecho -->
+  <ellipse cx="100" cy="132" rx="22" ry="26" fill="#e8c49a"/>
+  <!-- Orejas -->
+  <ellipse cx="60" cy="72" rx="18" ry="34" fill="#8a5a30" transform="rotate(-12 60 72)"/>
+  <ellipse cx="140" cy="72" rx="18" ry="34" fill="#8a5a30" transform="rotate(12 140 72)"/>
+  <!-- Cabeza -->
+  <circle cx="100" cy="80" r="42" fill="#c9996a"/>
+  <!-- Mancha ojo -->
+  <ellipse cx="80" cy="74" rx="16" ry="18" fill="#8a5a30" opacity="0.8"/>
+  <!-- Ojos -->
+  <circle cx="82" cy="78" r="7.5" fill="#2d1b0e"/>
+  <circle cx="118" cy="78" r="7.5" fill="#2d1b0e"/>
+  <circle cx="84.5" cy="75" r="2.8" fill="#fff"/>
+  <circle cx="120.5" cy="75" r="2.8" fill="#fff"/>
+  <!-- Nariz y hocico -->
+  <ellipse cx="100" cy="98" rx="17" ry="13" fill="#f5e0c0"/>
+  <ellipse cx="100" cy="92" rx="5.5" ry="4" fill="#2d1b0e"/>
+  <path d="M93 100 Q100 108 107 100" stroke="#2d1b0e" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <!-- Lengua -->
+  <ellipse cx="100" cy="110" rx="5" ry="7" fill="#ff7a8a"/>
+  <!-- Rubor -->
+  <ellipse cx="68" cy="92" rx="7" ry="4.5" fill="#ffb3c1" opacity="0.7"/>
+  <ellipse cx="132" cy="92" rx="7" ry="4.5" fill="#ffb3c1" opacity="0.7"/>
+</svg>
