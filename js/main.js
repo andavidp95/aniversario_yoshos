@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bgMusic = new Audio('song/title.mp3');
     bgMusic.loop = true;
     let isMusicPlaying = false;
+    let inJourney = false; // true después de pasar la contraseña
 
     // Audio de Shrek/Accidentally in Love para la carta
     const shrekAudio = new Audio('song/shrek.mp3');
@@ -99,8 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
         tryNextPhoto();
     }
 
-    // --- CARGAR EL JSON DE LAS LETRAS ---
-    fetch('script.json')
+    // --- CARGAR EL JSON DE LAS LETRAS (sin caché) ---
+    fetch('script.json', { cache: 'no-store' })
         .then(response => response.json())
         .then(data => {
             lyricsData = data;
@@ -222,19 +223,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     btnMusic.addEventListener('click', (e) => {
-        e.stopPropagation(); 
-        if (bgMusic.paused) {
-            bgMusic.play();
-            isMusicPlaying = true;
-            if(volumeSlider.value == 0) {
+        e.stopPropagation();
+        // Durante el recorrido (post-contraseña) el control es de la canción de Shrek
+        const track = inJourney ? shrekAudio : bgMusic;
+        if (track.paused) {
+            track.play();
+            if (inJourney) { shrekReady = true; isMusicPlaying = true; }
+            else isMusicPlaying = true;
+            if (volumeSlider.value == 0) {
                 volumeSlider.value = 40;
                 bgMusic.volume = 0.4;
                 stage3Audio.volume = 0.4;
+                shrekAudio.volume = 0.4;
             }
             iconMusicOn.style.display = 'block';
             iconMusicOff.style.display = 'none';
         } else {
-            bgMusic.pause();
+            track.pause();
             isMusicPlaying = false;
             iconMusicOn.style.display = 'none';
             iconMusicOff.style.display = 'block';
@@ -324,10 +329,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 stage2.classList.remove('hidden');
                 stage2.classList.add('active');
 
-                // Suena Shrek en la carta si el archivo existe
+                // La canción de Shrek suena desde aquí y se mantiene en todo el recorrido
+                inJourney = true;
                 if (shrekReady) {
                     shrekAudio.currentTime = 0;
-                    shrekAudio.play().catch(e => console.log(e));
+                    shrekAudio.play().then(() => {
+                        isMusicPlaying = true;
+                        iconMusicOn.style.display = 'block';
+                        iconMusicOff.style.display = 'none';
+                    }).catch(e => console.log(e));
                 }
             }, 1500);
         } else {
@@ -393,7 +403,7 @@ document.addEventListener('DOMContentLoaded', () => {
         stage3Ended = true;
 
         cancelAnimationFrame(requestAnimFrameId);
-        stage3Audio.pause();
+        // Shrek sigue sonando en la tarjeta final
         
         stage3.classList.remove('active');
         stage3.classList.add('hidden');
@@ -403,17 +413,14 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     btnReveal.addEventListener('click', () => {
-        shrekAudio.pause();
-
         stage2.classList.remove('active');
         stage2.classList.add('hidden');
-        
+
         stage3.classList.remove('hidden');
         stage3.classList.add('active');
 
         stage3Ended = false;
         stage3StartTime = performance.now();
-        startStage3Track();
         requestAnimFrameId = requestAnimationFrame(syncLyrics);
     });
 
