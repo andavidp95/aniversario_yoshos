@@ -1,39 +1,29 @@
 [
     { "start": 1.5, "duration": 2.2, "type": "reason", "text": "Me encantas, Fiorella." },
-    { "start": 4.2, "duration": 3.0, "type": "reason", "text": "En poquitos días será ya casi un año desde que empezamos a escribir nuestra historia." },
-
-    { "start": 7.7, "duration": 3.5, "type": "number", "text": "RAZÓN 1!" },
-    { "start": 11.5, "duration": 4.2, "type": "reason", "text": "Me das una razón de despertar,\nsabiendo que unos buenos días se intercambiarán." },
-
-    { "start": 16.2, "duration": 3.5, "type": "number", "text": "RAZÓN 2!" },
-    { "start": 20, "duration": 3.6, "type": "reason", "text": "Verte a los ojos me fascina.\nSimplemente me cautiva." },
-
-    { "start": 24.1, "duration": 3.5, "type": "number", "text": "RAZÓN 3!" },
-    { "start": 27.9, "duration": 5.2, "type": "reason", "text": "Todas nuestras discusiones se terminan resolviendo con besos.\nMe has permitido entrar a tu puerta y siempre darte un abrazo." },
-
-    { "start": 33.6, "duration": 3.5, "type": "number", "text": "RAZÓN 4!" },
-    { "start": 37.4, "duration": 4.6, "type": "reason", "text": "Cuando no te tengo conmigo,\ntu encanto llega hasta perpetuar mis sueños." },
-
-    { "start": 42.5, "duration": 3.5, "type": "number", "text": "RAZÓN 5!" },
-    { "start": 46.3, "duration": 5.2, "type": "reason", "text": "Mira un año atrás: ¿somos los mismos?\nCreo que somos mejores que antes.\nTe amo, te extraño y te deseo." },
-
-    { "start": 52, "duration": 3.5, "type": "number", "text": "RAZÓN 6!" },
-    { "start": 55.8, "duration": 4.2, "type": "reason", "text": "Eres la dueña de mis sueños,\nmis misterios y mis pensamientos." },
-
-    { "start": 60.5, "duration": 3.5, "type": "number", "text": "RAZÓN 7!" },
-    { "start": 64.3, "duration": 4.6, "type": "reason", "text": "Te ha dibujado un pincel de talento celestial,\na mi manera de ver nunca habría un rival." },
-
-    { "start": 69.4, "duration": 3.5, "type": "number", "text": "RAZÓN 8!" },
-    { "start": 73.2, "duration": 4.4, "type": "reason", "text": "Aceptas mis ráfagas de cursilerías, mis enojos,\ny entiendes mi forma de amar." },
-
-    { "start": 78.1, "duration": 3.5, "type": "number", "plain": true, "text": "RAZÓN 9!" },
-    { "start": 82.1, "duration": 16.0, "type": "flower", "text": "" },
-    { "start": 98.4, "duration": 3.6, "type": "reason", "text": "Tienes todo para ser buena mamá." },
-
-    { "start": 102.5, "duration": 3.1, "type": "number", "text": "CUENTA" },
-    { "start": 106.1, "duration": 3.1, "type": "number", "text": "3" },
-    { "start": 109.7, "duration": 3.1, "type": "number", "text": "2" },
-    { "start": 113.3, "duration": 3.1, "type": "number", "text": "1" },
-    { "start": 116.9, "duration": 2.2, "type": "reason", "text": "¡Nuestro primer <b>a</b>niversari<b>o</b>!" },
-    { "start": 119.6, "duration": 4.9, "type": "number", "plain": true, "text": "¡TE AMO!" }
+    { "start": 4.2, "duration": 3, "type": "reason", "text": "En poquitos días será ya casi un año desde que empezamos a escribir nuestra historia." },
+    { "start": 7.7, "duration": 5, "type": "number", "text": "RAZÓN 1!" },
+    { "start": 13, "duration": 4.2, "type": "reason", "text": "Me das una razón de despertar,\nsabiendo que unos buenos días se intercambiarán." },
+    { "start": 17.7, "duration": 5, "type": "number", "text": "RAZÓN 2!" },
+    { "start": 23, "duration": 3.6, "type": "reason", "text": "Verte a los ojos me fascina.\nSimplemente me cautiva." },
+    { "start": 27.1, "duration": 5, "type": "number", "text": "RAZÓN 3!" },
+    { "start": 32.4, "duration": 5.2, "type": "reason", "text": "Todas nuestras discusiones se terminan resolviendo con besos.\nMe has permitido entrar a tu puerta y siempre darte un abrazo." },
+    { "start": 38.1, "duration": 5, "type": "number", "text": "RAZÓN 4!" },
+    { "start": 43.4, "duration": 4.6, "type": "reason", "text": "Cuando no te tengo conmigo,\ntu encanto llega hasta perpetuar mis sueños." },
+    { "start": 48.5, "duration": 5, "type": "number", "text": "RAZÓN 5!" },
+    { "start": 53.8, "duration": 5.2, "type": "reason", "text": "Mira un año atrás: ¿somos los mismos?\nCreo que somos mejores que antes.\nTe amo, te extraño y te deseo." },
+    { "start": 59.5, "duration": 5, "type": "number", "text": "RAZÓN 6!" },
+    { "start": 64.8, "duration": 4.2, "type": "reason", "text": "Eres la dueña de mis sueños,\nmis misterios y mis pensamientos." },
+    { "start": 69.5, "duration": 5, "type": "number", "text": "RAZÓN 7!" },
+    { "start": 74.8, "duration": 4.6, "type": "reason", "text": "Te ha dibujado un pincel de talento celestial,\na mi manera de ver nunca habría un rival." },
+    { "start": 79.9, "duration": 5, "type": "number", "text": "RAZÓN 8!" },
+    { "start": 85.2, "duration": 4.4, "type": "reason", "text": "Aceptas mis ráfagas de cursilerías, mis enojos,\ny entiendes mi forma de amar." },
+    { "start": 90.1, "duration": 16, "type": "flower", "text": "" },
+    { "start": 106.6, "duration": 3.5, "type": "number", "plain": true, "text": "RAZÓN 9!" },
+    { "start": 110.4, "duration": 3.6, "type": "reason", "text": "Tienes todo para ser buena mamá." },
+    { "start": 114.5, "duration": 4.6, "type": "number", "text": "CUENTA" },
+    { "start": 119.6, "duration": 4.6, "type": "number", "text": "3" },
+    { "start": 124.7, "duration": 4.6, "type": "number", "text": "2" },
+    { "start": 129.8, "duration": 4.6, "type": "number", "text": "1" },
+    { "start": 134.7, "duration": 2.2, "type": "reason", "text": "¡Nuestro primer <b>a</b>niversari<b>o</b>!" },
+    { "start": 137.4, "duration": 4.9, "type": "number", "plain": true, "text": "¡TE AMO!" }
 ]

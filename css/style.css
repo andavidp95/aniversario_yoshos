@@ -693,7 +693,7 @@ body, html {
 }
 
 .lyric-line.number.visible .orn {
-    animation: ornLife 1.6s ease-out forwards;
+    animation: ornLife 3s ease-out forwards;
 }
 
 /* Trazo que se dibuja solo, escalonado con --i (misma técnica que la flor) */
@@ -732,10 +732,10 @@ body, html {
     transform-origin: center;
 }
 
-.lyric-line.number.visible .orn .turn { animation: ornTurn 1.6s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
-.lyric-line.number.visible .orn .orbit { animation: drawIn 0.7s ease-out 0.25s forwards, orbitSpin 1.6s linear forwards; }
-.lyric-line.number.visible .orn .orbit-rev { animation: drawIn 0.7s ease-out 0.35s forwards, orbitSpinRev 1.6s linear forwards; }
-.lyric-line.number.visible .orn .beat { animation: drawIn 0.85s ease-out 0.1s forwards, heartBeat 0.4s ease-in-out 0.8s 2; }
+.lyric-line.number.visible .orn .turn { animation: ornTurn 3s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+.lyric-line.number.visible .orn .orbit { animation: drawIn 0.7s ease-out 0.25s forwards, orbitSpin 3s linear forwards; }
+.lyric-line.number.visible .orn .orbit-rev { animation: drawIn 0.7s ease-out 0.35s forwards, orbitSpinRev 3s linear forwards; }
+.lyric-line.number.visible .orn .beat { animation: drawIn 0.85s ease-out 0.1s forwards, heartBeat 0.5s ease-in-out 0.9s 3; }
 
 /* --- Capas extra de movimiento para ornamentos complejos --- */
 .orn .glow {
@@ -761,17 +761,17 @@ body, html {
     transform-origin: center;
 }
 
-.lyric-line.number.visible .orn .glow { animation: glowPulse 1.6s ease-in-out forwards; }
-.lyric-line.number.visible .orn .spin { animation: ornSpin 1.6s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
-.lyric-line.number.visible .orn .spin-rev { animation: ornSpinRev 1.6s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
-.lyric-line.number.visible .orn .sway { animation: ornSway 1.6s ease-in-out forwards; }
-.lyric-line.number.visible .orn .dr.echo { animation: echoRing 1.3s ease-out calc(var(--i, 0) * 0.1s) both; }
+.lyric-line.number.visible .orn .glow { animation: glowPulse 3s ease-in-out forwards; }
+.lyric-line.number.visible .orn .spin { animation: ornSpin 3s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+.lyric-line.number.visible .orn .spin-rev { animation: ornSpinRev 3s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+.lyric-line.number.visible .orn .sway { animation: ornSway 3s ease-in-out forwards; }
+.lyric-line.number.visible .orn .dr.echo { animation: echoRing 1.7s ease-out calc(var(--i, 0) * 0.1s) both; }
 
 @keyframes glowPulse {
     0% { opacity: 0; transform: scale(0.6); }
-    25% { opacity: 1; transform: scale(1); }
-    80% { opacity: 0.85; transform: scale(1.06); }
-    100% { opacity: 0; transform: scale(1.3); }
+    20% { opacity: 1; transform: scale(1); }
+    82% { opacity: 0.9; transform: scale(1.05); }
+    100% { opacity: 0; transform: scale(1.25); }
 }
 @keyframes ornSpin { to { transform: rotate(150deg); } }
 @keyframes ornSpinRev { to { transform: rotate(-150deg); } }
@@ -794,18 +794,18 @@ body, html {
 }
 @keyframes ornLife {
     0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5) rotate(-16deg); }
-    14% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
-    84% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
-    100% { opacity: 0; transform: translate(-50%, -50%) scale(1.14) rotate(5deg); }
+    12% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+    82% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(1.06) rotate(4deg); }
 }
 @keyframes ornTurn { from { transform: rotate(-18deg); } to { transform: rotate(16deg); } }
 @keyframes orbitSpin { to { transform: rotate(360deg); } }
 @keyframes orbitSpinRev { to { transform: rotate(-360deg); } }
 @keyframes heartBeat { 0%, 100% { transform: scale(1); } 30% { transform: scale(1.1); } 60% { transform: scale(0.98); } }
 
-/* El ornamento termina (1.6s), hay un respiro y el número sale a los 2s */
+/* El ornamento vive 3s (dibujo + giro + salida suave), respiro y el número sale a los 3.5s */
 .lyric-line.number.visible > span {
-    animation: numTextPop 0.45s cubic-bezier(0.25, 0.8, 0.25, 1) 2s both;
+    animation: numTextPop 0.45s cubic-bezier(0.25, 0.8, 0.25, 1) 3.5s both;
 }
 /* Sin ornamento ni pop: el texto entra directo con el fundido de la línea */
 .lyric-line.number.plain.visible > span {
