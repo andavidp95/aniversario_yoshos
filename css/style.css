@@ -758,6 +758,10 @@ body, html {
 .lyric-line.number.visible > span {
     animation: numTextPop 0.45s cubic-bezier(0.25, 0.8, 0.25, 1) 2s both;
 }
+/* Sin ornamento ni pop: el texto entra directo con el fundido de la línea */
+.lyric-line.number.plain.visible > span {
+    animation: none;
+}
 @keyframes numTextPop {
     0% { opacity: 0; transform: scale(0.55); filter: blur(6px); }
     60% { opacity: 1; }

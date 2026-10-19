@@ -28,7 +28,7 @@
 
     { "start": 78.1, "duration": 16.0, "type": "flower", "text": "" },
 
-    { "start": 94.6, "duration": 3.5, "type": "number", "text": "RAZÓN 9!" },
+    { "start": 94.6, "duration": 3.5, "type": "number", "plain": true, "text": "RAZÓN 9!" },
     { "start": 98.4, "duration": 3.6, "type": "reason", "text": "Tienes todo para ser buena mamá." },
 
     { "start": 102.5, "duration": 3.1, "type": "number", "text": "CUENTA" },
@@ -36,5 +36,5 @@
     { "start": 109.7, "duration": 3.1, "type": "number", "text": "2" },
     { "start": 113.3, "duration": 3.1, "type": "number", "text": "1" },
     { "start": 116.9, "duration": 2.2, "type": "reason", "text": "¡Nuestro primer <b>a</b>niversari<b>o</b>!" },
-    { "start": 119.6, "duration": 4.9, "type": "number", "text": "¡TE AMO!" }
+    { "start": 119.6, "duration": 4.9, "type": "number", "plain": true, "text": "¡TE AMO!" }
 ]

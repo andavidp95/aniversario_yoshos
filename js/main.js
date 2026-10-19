@@ -299,15 +299,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         </svg>
                     `;
                 } else if (item.type === 'number') {
-                    // Ornamento SVG complejo que se dibuja antes/con cada número
-                    const fx = document.createElement('div');
-                    fx.className = 'num-fx';
-                    const variant = (fxCounter++ % 8) + 1;
-                    el.classList.add('fx-' + variant);
-                    fx.innerHTML = ORNAMENTS[variant - 1];
-                    el.appendChild(fx);
                     const span = document.createElement('span');
                     span.innerHTML = item.text;
+                    if (item.plain) {
+                        // Sin ornamento ni pop: solo aparece el texto (ej. la flor es la última animación)
+                        el.classList.add('plain');
+                    } else {
+                        // Ornamento SVG complejo que se dibuja antes/con cada número
+                        const fx = document.createElement('div');
+                        fx.className = 'num-fx';
+                        const variant = (fxCounter++ % 8) + 1;
+                        el.classList.add('fx-' + variant);
+                        fx.innerHTML = ORNAMENTS[variant - 1];
+                        el.appendChild(fx);
+                    }
                     el.appendChild(span);
                 } else {
                     el.innerHTML = item.text;
