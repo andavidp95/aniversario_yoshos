@@ -26,9 +26,8 @@
     { "start": 69.4, "duration": 3.5, "type": "number", "text": "RAZÓN 8!" },
     { "start": 73.2, "duration": 4.4, "type": "reason", "text": "Aceptas mis ráfagas de cursilerías, mis enojos,\ny entiendes mi forma de amar." },
 
-    { "start": 78.1, "duration": 16.0, "type": "flower", "text": "" },
-
-    { "start": 94.6, "duration": 3.5, "type": "number", "plain": true, "text": "RAZÓN 9!" },
+    { "start": 78.1, "duration": 3.5, "type": "number", "plain": true, "text": "RAZÓN 9!" },
+    { "start": 82.1, "duration": 16.0, "type": "flower", "text": "" },
     { "start": 98.4, "duration": 3.6, "type": "reason", "text": "Tienes todo para ser buena mamá." },
 
     { "start": 102.5, "duration": 3.1, "type": "number", "text": "CUENTA" },

@@ -737,6 +737,55 @@ body, html {
 .lyric-line.number.visible .orn .orbit-rev { animation: drawIn 0.7s ease-out 0.35s forwards, orbitSpinRev 1.6s linear forwards; }
 .lyric-line.number.visible .orn .beat { animation: drawIn 0.85s ease-out 0.1s forwards, heartBeat 0.4s ease-in-out 0.8s 2; }
 
+/* --- Capas extra de movimiento para ornamentos complejos --- */
+.orn .glow {
+    opacity: 0;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.orn .spin, .orn .spin-rev {
+    transform-box: view-box;
+    transform-origin: 200px 200px;
+}
+
+.orn .sway {
+    transform-box: fill-box;
+    transform-origin: 50% 85%;
+}
+
+.orn .dr.echo {
+    stroke-dashoffset: 0;
+    stroke-width: 1.6;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.lyric-line.number.visible .orn .glow { animation: glowPulse 1.6s ease-in-out forwards; }
+.lyric-line.number.visible .orn .spin { animation: ornSpin 1.6s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+.lyric-line.number.visible .orn .spin-rev { animation: ornSpinRev 1.6s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+.lyric-line.number.visible .orn .sway { animation: ornSway 1.6s ease-in-out forwards; }
+.lyric-line.number.visible .orn .dr.echo { animation: echoRing 1.3s ease-out calc(var(--i, 0) * 0.1s) both; }
+
+@keyframes glowPulse {
+    0% { opacity: 0; transform: scale(0.6); }
+    25% { opacity: 1; transform: scale(1); }
+    80% { opacity: 0.85; transform: scale(1.06); }
+    100% { opacity: 0; transform: scale(1.3); }
+}
+@keyframes ornSpin { to { transform: rotate(150deg); } }
+@keyframes ornSpinRev { to { transform: rotate(-150deg); } }
+@keyframes ornSway {
+    0% { transform: rotate(-5deg); }
+    55% { transform: rotate(5deg); }
+    100% { transform: rotate(-2deg); }
+}
+@keyframes echoRing {
+    0% { opacity: 0; transform: scale(0.45); }
+    35% { opacity: 0.75; }
+    100% { opacity: 0; transform: scale(1.18); }
+}
+
 @keyframes drawIn { to { stroke-dashoffset: 0; } }
 @keyframes popOrn {
     0% { opacity: 0; transform: scale(0); }
