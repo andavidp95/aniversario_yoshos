@@ -680,9 +680,9 @@ body, html {
     display: block;
 }
 
-/* El número aparece DESPUÉS de que el efecto ya arrancó */
+/* El efecto se ve SOLO primero; el número sale a los 1.1s */
 .lyric-line.number.visible > span {
-    animation: numTextPop 0.45s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s both;
+    animation: numTextPop 0.45s cubic-bezier(0.25, 0.8, 0.25, 1) 1.1s both;
 }
 @keyframes numTextPop {
     0% { opacity: 0; transform: scale(0.55); filter: blur(6px); }
@@ -691,14 +691,14 @@ body, html {
 }
 
 /* Arranque garantizado: shorthand completo SOLO cuando está visible */
-.lyric-line.number.visible.fx-1 .num-fx i { animation: fxSparkBurst 1.3s cubic-bezier(0.2, 0.7, 0.3, 1) both; }
-.lyric-line.number.visible.fx-2 .num-fx i { animation: fxHeartRise 1.5s cubic-bezier(0.2, 0.7, 0.3, 1) both; }
-.lyric-line.number.visible.fx-3 .num-fx i { animation: fxPetalSpin 1.5s ease-out both; }
-.lyric-line.number.visible.fx-4 .num-fx i { animation: fxStarTwinkle 1.4s ease-out both; }
-.lyric-line.number.visible.fx-5 .num-fx i { animation: fxFirefly 1.5s ease-out both; }
-.lyric-line.number.visible.fx-6 .num-fx i { animation: fxDrip 1.4s ease-in both; }
-.lyric-line.number.visible.fx-7 .num-fx i { animation: fxRing 1.4s ease-out both; }
-.lyric-line.number.visible.fx-8 .num-fx i { animation: fxRay 1.3s ease-out both; }
+.lyric-line.number.visible.fx-1 .num-fx i { animation: fxSparkBurst 1.6s cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+.lyric-line.number.visible.fx-2 .num-fx i { animation: fxHeartRise 1.8s cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+.lyric-line.number.visible.fx-3 .num-fx i { animation: fxPetalSpin 1.8s ease-out both; }
+.lyric-line.number.visible.fx-4 .num-fx i { animation: fxStarTwinkle 1.7s ease-out both; }
+.lyric-line.number.visible.fx-5 .num-fx i { animation: fxFirefly 1.8s ease-out both; }
+.lyric-line.number.visible.fx-6 .num-fx i { animation: fxDrip 1.7s ease-in both; }
+.lyric-line.number.visible.fx-7 .num-fx i { animation: fxRing 1.7s ease-out both; }
+.lyric-line.number.visible.fx-8 .num-fx i { animation: fxRay 1.6s ease-out both; }
 
 /* FX 1: Chispas doradas explotando */
 .fx-1 .num-fx i {
