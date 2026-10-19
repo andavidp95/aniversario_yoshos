@@ -42,6 +42,127 @@ document.addEventListener('DOMContentLoaded', () => {
     let stage3TrackReady = false;
     let lyricsData = [];
     let fxCounter = 0;
+
+    // ---- Ornamentos SVG complejos (al estilo de la flor) para cada número ----
+    const f1 = n => n.toFixed(1);
+    const polar = (a, r) => {
+        const rad = (a - 90) * Math.PI / 180;
+        return [200 + r * Math.cos(rad), 200 + r * Math.sin(rad)];
+    };
+    const P = (a, r) => { const [x, y] = polar(a, r); return `${f1(x)},${f1(y)}`; };
+    const miniHeart = (x, y, s) =>
+        `M${f1(x)},${f1(y + 8 * s)} C${f1(x - 10 * s)},${f1(y + 2 * s)} ${f1(x - 9 * s)},${f1(y - 7 * s)} ${f1(x - 4 * s)},${f1(y - 7 * s)} ` +
+        `C${f1(x - 1 * s)},${f1(y - 7 * s)} ${f1(x)},${f1(y - 4 * s)} ${f1(x)},${f1(y - 2 * s)} ` +
+        `C${f1(x)},${f1(y - 4 * s)} ${f1(x + 1 * s)},${f1(y - 7 * s)} ${f1(x + 4 * s)},${f1(y - 7 * s)} ` +
+        `C${f1(x + 9 * s)},${f1(y - 7 * s)} ${f1(x + 10 * s)},${f1(y + 2 * s)} ${f1(x)},${f1(y + 8 * s)} Z`;
+    const sparklePath = (x, y) =>
+        `M${f1(x)},${f1(y - 11)} Q${f1(x + 2)},${f1(y - 2)} ${f1(x + 11)},${f1(y)} Q${f1(x + 2)},${f1(y + 2)} ${f1(x)},${f1(y + 11)} ` +
+        `Q${f1(x - 2)},${f1(y + 2)} ${f1(x - 11)},${f1(y)} Q${f1(x - 2)},${f1(y - 2)} ${f1(x)},${f1(y - 11)} Z`;
+    const svgOrn = inner => `<svg class="orn" viewBox="0 0 400 400">${inner}</svg>`;
+
+    const ORNAMENTS = [];
+
+    // FX 1: Mandala dorada de rayos que giran
+    {
+        let s = '<g class="turn">';
+        for (let k = 0; k < 12; k++) s += `<path class="dr" pathLength="1" style="--i:${k}" d="M${P(k * 30, 62)} L${P(k * 30, 152)}"/>`;
+        s += '<circle class="dr" cx="200" cy="200" r="56" pathLength="1" style="--i:7"/>';
+        s += '<circle class="dr" cx="200" cy="200" r="146" pathLength="1" style="--i:9"/></g>';
+        for (let k = 0; k < 6; k++) {
+            const [x, y] = polar(k * 60 + 15, 178);
+            s += `<path class="pop" style="--i:${10 + k}" d="M${f1(x)},${f1(y - 8)} L${f1(x + 8)},${f1(y)} L${f1(x)},${f1(y + 8)} L${f1(x - 8)},${f1(y)} Z"/>`;
+        }
+        s += '<circle class="dr" cx="200" cy="200" r="26" pathLength="1" style="--i:2"/>';
+        ORNAMENTS.push(svgOrn(s));
+    }
+
+    // FX 2: Corazón grande que late, con mini corazones
+    {
+        const HEART = 'M200,336 C120,278 64,220 64,154 C64,104 104,72 148,72 C176,72 194,88 200,104 C206,88 224,72 252,72 C296,72 336,104 336,154 C336,220 280,278 200,336 Z';
+        let s = `<path class="dr beat" pathLength="1" style="--i:0" d="${HEART}"/>`;
+        s += `<path class="dr" pathLength="1" transform="translate(200 206) scale(.5) translate(-200 -206)" style="--i:4" d="${HEART}"/>`;
+        s += '<path class="dr" pathLength="1" style="--i:6" d="M92,320 Q200,368 308,320"/>';
+        for (let k = 0; k < 6; k++) {
+            const [x, y] = polar(k * 60 + 30, 158);
+            s += `<path class="pop" style="--i:${8 + k}" d="${miniHeart(x, y, 1.7)}"/>`;
+        }
+        ORNAMENTS.push(svgOrn(s));
+    }
+
+    // FX 3: Loto abriéndose con polen dorado
+    {
+        let s = '<g class="turn">';
+        for (let k = 0; k < 8; k++) s += `<path class="dr petal" pathLength="1" transform="rotate(${k * 45} 200 200)" style="--i:${k}" d="M200,200 Q236,126 200,50 Q164,126 200,200 Z"/>`;
+        s += '<circle class="dr" cx="200" cy="200" r="52" pathLength="1" style="--i:7"/>';
+        s += '<circle class="dr" cx="200" cy="200" r="28" pathLength="1" style="--i:8"/></g>';
+        for (let k = 0; k < 8; k++) {
+            const [x, y] = polar(k * 45 + 22.5, 122);
+            s += `<circle class="pop" cx="${f1(x)}" cy="${f1(y)}" r="5" style="--i:${9 + k}"/>`;
+        }
+        ORNAMENTS.push(svgOrn(s));
+    }
+
+    // FX 4: Estrella con dos órbitas girando en sentidos opuestos
+    {
+        let s = '<path class="dr" pathLength="1" style="--i:0" d="M200,70 L232.4,155.5 L323.6,159.8 L252.3,217 L276.4,305.2 L200,255 L123.6,305.2 L147.7,217 L76.4,159.8 L167.6,155.5 Z"/>';
+        s += '<ellipse class="dr orbit" cx="200" cy="200" rx="152" ry="62" pathLength="1" style="--i:4"/>';
+        s += '<ellipse class="dr orbit orbit-rev" cx="200" cy="200" rx="62" ry="152" pathLength="1" style="--i:6"/>';
+        for (let k = 0; k < 5; k++) {
+            const [x, y] = polar(k * 72, 152);
+            s += `<path class="pop" style="--i:${8 + k}" d="${sparklePath(x, y)}"/>`;
+        }
+        ORNAMENTS.push(svgOrn(s));
+    }
+
+    // FX 5: Espiral de luciérnagas
+    {
+        let s = '<path class="dr" pathLength="1" style="--i:0" d="M200,200 C232,196 240,172 224,154 C204,132 168,142 158,176 C146,216 178,254 222,256 C274,258 312,214 304,158 C296,100 240,58 180,66 C114,75 64,132 64,200 C64,274 132,330 210,332"/>';
+        const dots = [[224, 154], [158, 176], [222, 256], [304, 158], [180, 66], [64, 200], [210, 332], [200, 200]];
+        dots.forEach(([x, y], k) => { s += `<circle class="pop" cx="${x}" cy="${y}" r="${k === 7 ? 7 : 6}" style="--i:${2 + k}"/>`; });
+        [[70, 70], [330, 70], [70, 330], [330, 330]].forEach(([x, y], k) => { s += `<path class="pop" style="--i:${10 + k}" d="${sparklePath(x, y)}"/>`; });
+        ORNAMENTS.push(svgOrn(s));
+    }
+
+    // FX 6: Lluvia de luz con gotas
+    {
+        let s = '';
+        for (let k = 0; k < 9; k++) {
+            const x = 64 + k * 34;
+            s += `<path class="dr" pathLength="1" style="--i:${k}" d="M${x},66 C${x - 16},140 ${x + 16},220 ${x},296"/>`;
+            s += `<circle class="pop" cx="${x}" cy="312" r="6.5" style="--i:${4 + k}"/>`;
+        }
+        [[34, 190], [366, 190], [200, 348]].forEach(([x, y], k) => { s += `<path class="pop" style="--i:${12 + k}" d="${sparklePath(x, y)}"/>`; });
+        ORNAMENTS.push(svgOrn(s));
+    }
+
+    // FX 7: Ondas concéntricas con anillo de puntos
+    {
+        let s = '';
+        [44, 76, 108, 140].forEach((r, k) => { s += `<circle class="dr" cx="200" cy="200" r="${r}" pathLength="1" style="--i:${k}"/>`; });
+        for (let k = 0; k < 12; k++) {
+            const [x, y] = polar(k * 30, 170);
+            s += `<circle class="pop" cx="${f1(x)}" cy="${f1(y)}" r="5" style="--i:${6 + k}"/>`;
+        }
+        s += '<path class="pop" style="--i:3" d="M200,160 L240,200 L200,240 L160,200 Z"/>';
+        s += '<path class="pop" style="--i:1" d="M200,178 L222,200 L200,222 L178,200 Z"/>';
+        ORNAMENTS.push(svgOrn(s));
+    }
+
+    // FX 8: Sol radiante de rayos alternos
+    {
+        let s = '';
+        for (let k = 0; k < 16; k++) {
+            const r0 = k % 2 ? 96 : 68, r1 = k % 2 ? 130 : 158;
+            s += `<path class="dr" pathLength="1" style="--i:${k}" d="M${P(k * 22.5, r0)} L${P(k * 22.5, r1)}"/>`;
+        }
+        s += '<circle class="dr" cx="200" cy="200" r="46" pathLength="1" style="--i:8"/>';
+        s += '<circle class="dr" cx="200" cy="200" r="26" pathLength="1" style="--i:6"/>';
+        for (let k = 0; k < 8; k++) {
+            const [x, y] = polar(k * 45 + 22.5, 176);
+            s += `<path class="pop" style="--i:${10 + k}" d="${sparklePath(x, y)}"/>`;
+        }
+        ORNAMENTS.push(svgOrn(s));
+    }
     let requestAnimFrameId = null;
     let stage3StartTime = null;
     let sequenceDuration = 0;
@@ -178,21 +299,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         </svg>
                     `;
                 } else if (item.type === 'number') {
-                    // Efecto animado distinto antes/con cada número
+                    // Ornamento SVG complejo que se dibuja antes/con cada número
                     const fx = document.createElement('div');
                     fx.className = 'num-fx';
                     const variant = (fxCounter++ % 8) + 1;
                     el.classList.add('fx-' + variant);
-                    for (let k = 0; k < 10; k++) {
-                        const p = document.createElement('i');
-                        p.style.setProperty('--r', (k * 36 + Math.random() * 22).toFixed(1) + 'deg');
-                        p.style.setProperty('--d', (55 + Math.random() * 70).toFixed(0) + 'px');
-                        p.style.setProperty('--dx', ((Math.random() - 0.5) * 130).toFixed(0) + 'px');
-                        p.style.setProperty('--fx', ((Math.random() - 0.5) * 150).toFixed(0) + 'px');
-                        p.style.setProperty('--fy', ((Math.random() - 0.5) * 110).toFixed(0) + 'px');
-                        p.style.setProperty('--sz', (0.7 + Math.random() * 0.8).toFixed(2));
-                        fx.appendChild(p);
-                    }
+                    fx.innerHTML = ORNAMENTS[variant - 1];
                     el.appendChild(fx);
                     const span = document.createElement('span');
                     span.innerHTML = item.text;
