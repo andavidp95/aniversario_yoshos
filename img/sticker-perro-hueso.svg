@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 200">
+  <!-- Perrito feliz con hueso -->
+  <ellipse cx="110" cy="184" rx="54" ry="8" fill="rgba(0,0,0,0.18)"/>
+  <!-- Cola -->
+  <path d="M158 126 Q186 116 182 92 Q179 78 169 84 Q176 104 154 118" fill="#f2d59b"/>
+  <!-- Cuerpo -->
+  <ellipse cx="112" cy="136" rx="46" ry="36" fill="#f7e3b8"/>
+  <!-- Mancha lateral -->
+  <ellipse cx="138" cy="126" rx="15" ry="12" fill="#e8c47d" opacity="0.75"/>
+  <!-- Patas -->
+  <ellipse cx="82" cy="168" rx="11" ry="14" fill="#f2d59b"/>
+  <ellipse cx="106" cy="172" rx="11" ry="12" fill="#fff3d6"/>
+  <ellipse cx="134" cy="170" rx="11" ry="13" fill="#f2d59b"/>
+  <ellipse cx="152" cy="166" rx="11" ry="14" fill="#fff3d6" transform="rotate(-15 152 166)"/>
+  <!-- Pecho -->
+  <ellipse cx="84" cy="140" rx="18" ry="22" fill="#fff3d6"/>
+  <!-- Orejas caídas -->
+  <ellipse cx="62" cy="76" rx="17" ry="32" fill="#d9a94f" transform="rotate(-14 62 76)"/>
+  <ellipse cx="126" cy="74" rx="17" ry="32" fill="#d9a94f" transform="rotate(14 126 74)"/>
+  <!-- Cabeza -->
+  <circle cx="94" cy="82" r="40" fill="#f7e3b8"/>
+  <!-- Mancha ojo -->
+  <ellipse cx="110" cy="74" rx="15" ry="17" fill="#e8c47d" opacity="0.8"/>
+  <!-- Ojos felices (arriba) -->
+  <path d="M74 78 Q81 70 88 78" stroke="#2d1b0e" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+  <path d="M104 76 Q111 68 118 76" stroke="#2d1b0e" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+  <!-- Hocico -->
+  <ellipse cx="94" cy="100" rx="16" ry="12" fill="#fff8ea"/>
+  <ellipse cx="94" cy="94" rx="5" ry="3.5" fill="#2d1b0e"/>
+  <!-- Hueso en la boca -->
+  <g transform="translate(94,116) rotate(-8)">
+    <rect x="-26" y="-6" width="52" height="12" rx="6" fill="#fffdf5" stroke="#e0d5c0" stroke-width="1.5"/>
+    <circle cx="-26" cy="-5" r="7" fill="#fffdf5" stroke="#e0d5c0" stroke-width="1.5"/>
+    <circle cx="-26" cy="5" r="7" fill="#fffdf5" stroke="#e0d5c0" stroke-width="1.5"/>
+    <circle cx="26" cy="-5" r="7" fill="#fffdf5" stroke="#e0d5c0" stroke-width="1.5"/>
+    <circle cx="26" cy="5" r="7" fill="#fffdf5" stroke="#e0d5c0" stroke-width="1.5"/>
+  </g>
+  <!-- Lengua asomando -->
+  <ellipse cx="94" cy="108" rx="5" ry="7" fill="#ff7a8a"/>
+  <!-- Rubor -->
+  <ellipse cx="66" cy="94" rx="7" ry="4.5" fill="#ffb3c1" opacity="0.75"/>
+  <ellipse cx="122" cy="92" rx="7" ry="4.5" fill="#ffb3c1" opacity="0.75"/>
+  <!-- Corazón flotante -->
+  <path d="M176 56 C170 49 160 45 160 37 C160 31 166 28 171 31 C173 33 175 35 176 37 C177 35 179 33 181 31 C186 28 192 31 192 37 C192 45 182 49 176 56Z" fill="#ff5a7a"/>
+</svg>

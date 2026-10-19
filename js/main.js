@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     stage3Audio.loop = true;
     let stage3TrackReady = false;
     let lyricsData = [];
+    let fxCounter = 0;
     let requestAnimFrameId = null;
     let stage3StartTime = null;
     let sequenceDuration = 0;
@@ -176,6 +177,26 @@ document.addEventListener('DOMContentLoaded', () => {
                             <circle cx="200" cy="50" r="5" class="pollen" />
                         </svg>
                     `;
+                } else if (item.type === 'number') {
+                    // Efecto animado distinto antes/con cada número
+                    const fx = document.createElement('div');
+                    fx.className = 'num-fx';
+                    const variant = (fxCounter++ % 8) + 1;
+                    el.classList.add('fx-' + variant);
+                    for (let k = 0; k < 10; k++) {
+                        const p = document.createElement('i');
+                        p.style.setProperty('--r', (k * 36 + Math.random() * 22).toFixed(1) + 'deg');
+                        p.style.setProperty('--d', (55 + Math.random() * 70).toFixed(0) + 'px');
+                        p.style.setProperty('--dx', ((Math.random() - 0.5) * 130).toFixed(0) + 'px');
+                        p.style.setProperty('--fx', ((Math.random() - 0.5) * 150).toFixed(0) + 'px');
+                        p.style.setProperty('--fy', ((Math.random() - 0.5) * 110).toFixed(0) + 'px');
+                        p.style.setProperty('--sz', (0.7 + Math.random() * 0.8).toFixed(2));
+                        fx.appendChild(p);
+                    }
+                    el.appendChild(fx);
+                    const span = document.createElement('span');
+                    span.innerHTML = item.text;
+                    el.appendChild(span);
                 } else {
                     el.innerHTML = item.text;
                 }

@@ -91,16 +91,78 @@
   <!-- Pradera oscura al frente -->
   <path d="M0,820 Q400,770 800,810 Q1200,850 1600,800 L1600,900 L0,900 Z" fill="#12041c"/>
 
-  <!-- Florecitas brillantes -->
+  <!-- Campo de flores brillantes -->
+  <g opacity="0.95">
+    <circle cx="60" cy="838" r="4" fill="#ff6b9d"/><circle cx="60" cy="838" r="9" fill="#ff6b9d" opacity="0.22"/>
+    <circle cx="140" cy="856" r="3.5" fill="#ffd54f"/><circle cx="140" cy="856" r="7" fill="#ffd54f" opacity="0.22"/>
+    <circle cx="230" cy="834" r="4.5" fill="#ce93d8"/><circle cx="230" cy="834" r="9" fill="#ce93d8" opacity="0.22"/>
+    <circle cx="320" cy="862" r="3.5" fill="#ff8a80"/><circle cx="320" cy="862" r="7" fill="#ff8a80" opacity="0.22"/>
+    <circle cx="420" cy="848" r="4" fill="#ffd54f"/><circle cx="420" cy="848" r="8" fill="#ffd54f" opacity="0.22"/>
+    <circle cx="520" cy="866" r="3" fill="#ff6b9d"/><circle cx="520" cy="866" r="7" fill="#ff6b9d" opacity="0.2"/>
+    <circle cx="620" cy="846" r="4.5" fill="#fff59d"/><circle cx="620" cy="846" r="9" fill="#fff59d" opacity="0.22"/>
+    <circle cx="720" cy="864" r="3.5" fill="#ce93d8"/><circle cx="720" cy="864" r="7" fill="#ce93d8" opacity="0.2"/>
+    <circle cx="880" cy="858" r="4" fill="#ff8fab"/><circle cx="880" cy="858" r="8" fill="#ff8fab" opacity="0.22"/>
+    <circle cx="980" cy="844" r="3.5" fill="#ffd54f"/><circle cx="980" cy="844" r="7" fill="#ffd54f" opacity="0.22"/>
+    <circle cx="1080" cy="866" r="4.5" fill="#ff6b9d"/><circle cx="1080" cy="866" r="9" fill="#ff6b9d" opacity="0.22"/>
+    <circle cx="1180" cy="848" r="3.5" fill="#ce93d8"/><circle cx="1180" cy="848" r="7" fill="#ce93d8" opacity="0.2"/>
+    <circle cx="1280" cy="868" r="4" fill="#ff8a80"/><circle cx="1280" cy="868" r="8" fill="#ff8a80" opacity="0.22"/>
+    <circle cx="1380" cy="850" r="3.5" fill="#fff59d"/><circle cx="1380" cy="850" r="7" fill="#fff59d" opacity="0.22"/>
+    <circle cx="1480" cy="864" r="4.5" fill="#ff8fab"/><circle cx="1480" cy="864" r="9" fill="#ff8fab" opacity="0.22"/>
+    <circle cx="1560" cy="838" r="3.5" fill="#ffd54f"/><circle cx="1560" cy="838" r="7" fill="#ffd54f" opacity="0.22"/>
+  </g>
+
+  <!-- Tulipanes silueteados con puntas luminosas -->
+  <g stroke="#1f0a2c" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.9">
+    <path d="M90,900 L92,826"/><path d="M270,900 L266,834"/><path d="M460,900 L464,838"/>
+    <path d="M660,900 L656,830"/><path d="M940,900 L944,836"/><path d="M1130,900 L1126,832"/>
+    <path d="M1330,900 L1334,840"/><path d="M1520,900 L1516,834"/>
+  </g>
   <g opacity="0.9">
-    <circle cx="180" cy="845" r="4" fill="#ff6b9d"/>
-    <circle cx="180" cy="845" r="8" fill="#ff6b9d" opacity="0.25"/>
-    <circle cx="420" cy="860" r="3.5" fill="#ffd54f"/>
-    <circle cx="420" cy="860" r="7" fill="#ffd54f" opacity="0.25"/>
-    <circle cx="1150" cy="850" r="4" fill="#ce93d8"/>
-    <circle cx="1150" cy="850" r="8" fill="#ce93d8" opacity="0.25"/>
-    <circle cx="1380" cy="865" r="3.5" fill="#ff8a80"/>
-    <circle cx="1380" cy="865" r="7" fill="#ff8a80" opacity="0.25"/>
+    <circle cx="92" cy="822" r="5" fill="#ff6b9d"/><circle cx="92" cy="822" r="11" fill="#ff6b9d" opacity="0.25"/>
+    <circle cx="266" cy="830" r="4.5" fill="#ffd54f"/><circle cx="266" cy="830" r="10" fill="#ffd54f" opacity="0.25"/>
+    <circle cx="464" cy="834" r="5" fill="#ce93d8"/><circle cx="464" cy="834" r="11" fill="#ce93d8" opacity="0.25"/>
+    <circle cx="656" cy="826" r="4.5" fill="#ff8fab"/><circle cx="656" cy="826" r="10" fill="#ff8fab" opacity="0.25"/>
+    <circle cx="944" cy="832" r="5" fill="#fff59d"/><circle cx="944" cy="832" r="11" fill="#fff59d" opacity="0.25"/>
+    <circle cx="1126" cy="828" r="4.5" fill="#ff6b9d"/><circle cx="1126" cy="828" r="10" fill="#ff6b9d" opacity="0.25"/>
+    <circle cx="1334" cy="836" r="5" fill="#ce93d8"/><circle cx="1334" cy="836" r="11" fill="#ce93d8" opacity="0.25"/>
+    <circle cx="1516" cy="830" r="4.5" fill="#ffd54f"/><circle cx="1516" cy="830" r="10" fill="#ffd54f" opacity="0.25"/>
+  </g>
+
+  <!-- Mariposas -->
+  <g opacity="0.9">
+    <g transform="translate(380,330) rotate(-12)">
+      <ellipse cx="-9" cy="-4" rx="9" ry="6" fill="#ff8fab"/><ellipse cx="9" cy="-4" rx="9" ry="6" fill="#ff8fab"/>
+      <ellipse cx="-7" cy="5" rx="6" ry="4.5" fill="#ff6b9d"/><ellipse cx="7" cy="5" rx="6" ry="4.5" fill="#ff6b9d"/>
+      <line x1="0" y1="-8" x2="0" y2="8" stroke="#4a1030" stroke-width="2"/>
+      <line x1="-2" y1="-8" x2="-6" y2="-14" stroke="#4a1030" stroke-width="1.4"/>
+      <line x1="2" y1="-8" x2="6" y2="-14" stroke="#4a1030" stroke-width="1.4"/>
+    </g>
+    <g transform="translate(1230,300) rotate(10) scale(0.85)">
+      <ellipse cx="-9" cy="-4" rx="9" ry="6" fill="#ce93d8"/><ellipse cx="9" cy="-4" rx="9" ry="6" fill="#ce93d8"/>
+      <ellipse cx="-7" cy="5" rx="6" ry="4.5" fill="#ba68c8"/><ellipse cx="7" cy="5" rx="6" ry="4.5" fill="#ba68c8"/>
+      <line x1="0" y1="-8" x2="0" y2="8" stroke="#311b52" stroke-width="2"/>
+      <line x1="-2" y1="-8" x2="-6" y2="-14" stroke="#311b52" stroke-width="1.4"/>
+      <line x1="2" y1="-8" x2="6" y2="-14" stroke="#311b52" stroke-width="1.4"/>
+    </g>
+    <g transform="translate(960,420) rotate(-6) scale(0.7)">
+      <ellipse cx="-9" cy="-4" rx="9" ry="6" fill="#ffd54f"/><ellipse cx="9" cy="-4" rx="9" ry="6" fill="#ffd54f"/>
+      <ellipse cx="-7" cy="5" rx="6" ry="4.5" fill="#ffb300"/><ellipse cx="7" cy="5" rx="6" ry="4.5" fill="#ffb300"/>
+      <line x1="0" y1="-8" x2="0" y2="8" stroke="#5d4300" stroke-width="2"/>
+      <line x1="-2" y1="-8" x2="-6" y2="-14" stroke="#5d4300" stroke-width="1.4"/>
+      <line x1="2" y1="-8" x2="6" y2="-14" stroke="#5d4300" stroke-width="1.4"/>
+    </g>
+  </g>
+
+  <!-- Polen luminoso flotando -->
+  <g filter="url(#soft)">
+    <circle cx="300" cy="420" r="4" fill="#ffe082" opacity="0.7"/>
+    <circle cx="520" cy="360" r="3" fill="#ff8fab" opacity="0.6"/>
+    <circle cx="700" cy="470" r="4" fill="#fff59d" opacity="0.65"/>
+    <circle cx="1050" cy="380" r="3.5" fill="#ce93d8" opacity="0.6"/>
+    <circle cx="1400" cy="430" r="4" fill="#ffe082" opacity="0.6"/>
+    <circle cx="180" cy="500" r="3" fill="#ff8fab" opacity="0.55"/>
+    <circle cx="870" cy="330" r="3.5" fill="#fff59d" opacity="0.6"/>
+    <circle cx="1320" cy="520" r="3" fill="#ff8fab" opacity="0.55"/>
   </g>
 
   <!-- Pajaritos -->
