@@ -211,16 +211,26 @@ document.addEventListener('DOMContentLoaded', () => {
     stage3Audio.volume = volumeSlider.value / 100;
     shrekAudio.volume = volumeSlider.value / 100;
 
+    // Buffer desde el inicio para que suene en cuanto haya gesto
+    bgMusic.preload = 'auto';
+
     const initMusic = () => {
         if (!isMusicPlaying && bgMusic.volume > 0) {
             bgMusic.play().then(() => {
                 isMusicPlaying = true;
                 iconMusicOn.style.display = 'block';
                 iconMusicOff.style.display = 'none';
+                gestureEvents.forEach(ev => document.body.removeEventListener(ev, initMusic));
             }).catch(e => console.log("Esperando interacción."));
+        } else if (isMusicPlaying) {
+            gestureEvents.forEach(ev => document.body.removeEventListener(ev, initMusic));
         }
     };
-    document.body.addEventListener('click', initMusic, { once: true });
+    // El sonido empieza ya al cargar (si el navegador lo permite) y,
+    // si no, con el primer gesto: pointer, touch, tecla o click
+    const gestureEvents = ['pointerdown', 'touchstart', 'keydown', 'click'];
+    gestureEvents.forEach(ev => document.body.addEventListener(ev, initMusic, { passive: true }));
+    initMusic();
 
     btnVolumeToggle.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -342,6 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             bgMusic.pause();
             isMusicPlaying = false;
+            gestureEvents.forEach(ev => document.body.removeEventListener(ev, initMusic));
             
             setTimeout(() => {
                 stage1.classList.remove('active');
