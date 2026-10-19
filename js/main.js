@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </svg>
                     `;
                 } else {
-                    el.textContent = item.text;
+                    el.innerHTML = item.text;
                 }
 
                 lyricsContainer.appendChild(el);

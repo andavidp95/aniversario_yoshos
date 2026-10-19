@@ -1,284 +1,55 @@
 [
-    {
-        "start": 1.5,
-        "duration": 1.2,
-        "type": "number",
-        "text": "1 2 3"
-    },
-    {
-        "start": 3.0,
-        "duration": 1.2,
-        "type": "number",
-        "text": "4 5 6"
-    },
-    {
-        "start": 4.5,
-        "duration": 1.5,
-        "type": "number",
-        "text": "7 8 9"
-    },
-    {
-        "start": 6.5,
-        "duration": 2.2,
-        "type": "reason",
-        "text": "Me encantas, Fiorella."
-    },
-    {
-        "start": 9.3,
-        "duration": 2.4,
-        "type": "reason",
-        "text": "Hace un año que me encantas."
-    },
-    {
-        "start": 12.5,
-        "duration": 0.9,
-        "type": "number",
-        "text": "RAZÓN 1!"
-    },
-    {
-        "start": 13.7,
-        "duration": 2.0,
-        "type": "reason",
-        "text": "Tu sonrisa me lleva a la acción."
-    },
-    {
-        "start": 15.9,
-        "duration": 2.6,
-        "type": "reason",
-        "text": "Si te ríes junto a mí, no hay mejor reacción."
-    },
-    {
-        "start": 18.9,
-        "duration": 0.9,
-        "type": "number",
-        "text": "RAZÓN 2!"
-    },
-    {
-        "start": 20.1,
-        "duration": 2.2,
-        "type": "reason",
-        "text": "Tu mirada, cuando estamos solos tú y yo."
-    },
-    {
-        "start": 22.5,
-        "duration": 2.8,
-        "type": "reason",
-        "text": "Tus ojos me fascinan siempre que escucho tu voz."
-    },
-    {
-        "start": 25.7,
-        "duration": 0.9,
-        "type": "number",
-        "text": "RAZÓN 3!"
-    },
-    {
-        "start": 26.8,
-        "duration": 2.0,
-        "type": "reason",
-        "text": "Nuestras charlas, cara a cara los dos,"
-    },
-    {
-        "start": 29.0,
-        "duration": 0.9,
-        "type": "reason",
-        "text": "divirtiéndonos,"
-    },
-    {
-        "start": 30.1,
-        "duration": 2.2,
-        "type": "reason",
-        "text": "o también demostrándonos amor."
-    },
-    {
-        "start": 32.7,
-        "duration": 2.4,
-        "type": "reason",
-        "text": "Esto es muy común, especialmente entre los dos."
-    },
-    {
-        "start": 35.4,
-        "duration": 2.8,
-        "type": "reason",
-        "text": "Todos los desacuerdos se resuelven sin disparos."
-    },
-    {
-        "start": 38.6,
-        "duration": 0.9,
-        "type": "number",
-        "text": "RAZÓN 4!"
-    },
-    {
-        "start": 39.7,
-        "duration": 2.6,
-        "type": "reason",
-        "text": "Tus abrazos diciéndome que todo estará bien,"
-    },
-    {
-        "start": 42.3,
-        "duration": 2.7,
-        "type": "reason",
-        "text": "tiempo donde cargo mis energías junto a ti."
-    },
-    {
-        "start": 45.2,
-        "duration": 2.6,
-        "type": "reason",
-        "text": "Me das tanta paz, tanta tranquilidad."
-    },
-    {
-        "start": 48.0,
-        "duration": 2.6,
-        "type": "reason",
-        "text": "Mi cabeza da vueltas diciendo que no te alejes."
-    },
-    {
-        "start": 51.0,
-        "duration": 0.9,
-        "type": "number",
-        "text": "RAZÓN 5!"
-    },
-    {
-        "start": 52.1,
-        "duration": 2.2,
-        "type": "reason",
-        "text": "Tu cariño, tan grande como el cielo,"
-    },
-    {
-        "start": 54.5,
-        "duration": 2.6,
-        "type": "reason",
-        "text": "hace que quiera morir en tus brazos."
-    },
-    {
-        "start": 57.5,
-        "duration": 0.9,
-        "type": "number",
-        "text": "RAZÓN 6!"
-    },
-    {
-        "start": 58.6,
-        "duration": 2.0,
-        "type": "reason",
-        "text": "Tu paciencia para hacerme entender."
-    },
-    {
-        "start": 60.8,
-        "duration": 1.2,
-        "type": "reason",
-        "text": "Eres tú la magia"
-    },
-    {
-        "start": 62.2,
-        "duration": 1.8,
-        "type": "reason",
-        "text": "que me hace volver a creer."
-    },
-    {
-        "start": 64.3,
-        "duration": 0.9,
-        "type": "number",
-        "text": "RAZÓN 7!"
-    },
-    {
-        "start": 65.4,
-        "duration": 1.6,
-        "type": "reason",
-        "text": "Confesándome a ti."
-    },
-    {
-        "start": 67.2,
-        "duration": 1.9,
-        "type": "reason",
-        "text": "Tu cuerpo es realmente insuperable."
-    },
-    {
-        "start": 69.3,
-        "duration": 2.0,
-        "type": "reason",
-        "text": "A mi manera de ver, no tienes rival."
-    },
-    {
-        "start": 71.6,
-        "duration": 0.9,
-        "type": "number",
-        "text": "RAZÓN 8!"
-    },
-    {
-        "start": 72.7,
-        "duration": 2.0,
-        "type": "reason",
-        "text": "Tu ternura y forma de amar."
-    },
-    {
-        "start": 74.9,
-        "duration": 1.6,
-        "type": "reason",
-        "text": "Eres muy especial."
-    },
-    {
-        "start": 76.7,
-        "duration": 2.5,
-        "type": "reason",
-        "text": "Esto parece un sueño, no quiero despertar."
-    },
-    {
-        "start": 79.5,
-        "duration": 16.0,
-        "type": "flower",
-        "text": ""
-    },
-    {
-        "start": 96.0,
-        "duration": 0.9,
-        "type": "number",
-        "text": "RAZÓN 9!"
-    },
-    {
-        "start": 97.1,
-        "duration": 2.0,
-        "type": "reason",
-        "text": "Es tu alma tan sincera y transparente,"
-    },
-    {
-        "start": 99.3,
-        "duration": 2.8,
-        "type": "reason",
-        "text": "que me hace querer amarte incondicionalmente."
-    },
-    {
-        "start": 102.5,
-        "duration": 0.6,
-        "type": "number",
-        "text": "CUENTA"
-    },
-    {
-        "start": 103.2,
-        "duration": 1.0,
-        "type": "number",
-        "text": "1 2 3"
-    },
-    {
-        "start": 104.3,
-        "duration": 1.0,
-        "type": "number",
-        "text": "4 5 6"
-    },
-    {
-        "start": 105.4,
-        "duration": 1.5,
-        "type": "number",
-        "text": "7 8 9"
-    },
-    {
-        "start": 107.2,
-        "duration": 1.6,
-        "type": "reason",
-        "text": "¡Nuestro primer aniversario!"
-    },
-    {
-        "start": 109.1,
-        "duration": 4.0,
-        "type": "number",
-        "text": "¡TE AMO!"
-    }
+    { "start": 1.5, "duration": 0.7, "type": "number", "text": "1" },
+    { "start": 2.3, "duration": 0.7, "type": "number", "text": "2" },
+    { "start": 3.1, "duration": 0.7, "type": "number", "text": "3" },
+    { "start": 3.9, "duration": 0.7, "type": "number", "text": "4" },
+    { "start": 4.7, "duration": 0.7, "type": "number", "text": "5" },
+    { "start": 5.5, "duration": 0.7, "type": "number", "text": "6" },
+    { "start": 6.3, "duration": 0.7, "type": "number", "text": "7" },
+    { "start": 7.1, "duration": 0.7, "type": "number", "text": "8" },
+    { "start": 7.9, "duration": 0.9, "type": "number", "text": "9" },
+    { "start": 9.2, "duration": 2.2, "type": "reason", "text": "Me encantas, Fiorella." },
+    { "start": 11.9, "duration": 2.4, "type": "reason", "text": "Hace un año que me encantas." },
+
+    { "start": 14.8, "duration": 0.9, "type": "number", "text": "RAZÓN 1!" },
+    { "start": 15.9, "duration": 4.2, "type": "reason", "text": "Me das una razón de despertar,\nsabiendo que unos buenos días se intercambiarán." },
+
+    { "start": 20.5, "duration": 0.9, "type": "number", "text": "RAZÓN 2!" },
+    { "start": 21.6, "duration": 3.6, "type": "reason", "text": "Verte a los ojos me fascina.\nSimplemente me cautiva." },
+
+    { "start": 25.6, "duration": 0.9, "type": "number", "text": "RAZÓN 3!" },
+    { "start": 26.7, "duration": 5.2, "type": "reason", "text": "Todas nuestras discusiones se terminan resolviendo con besos.\nMe has permitido entrar a tu puerta y siempre darte un abrazo." },
+
+    { "start": 32.3, "duration": 0.9, "type": "number", "text": "RAZÓN 4!" },
+    { "start": 33.4, "duration": 4.6, "type": "reason", "text": "Cuando no te tengo conmigo,\ntu encanto llega hasta perpetuar mis sueños." },
+
+    { "start": 38.4, "duration": 0.9, "type": "number", "text": "RAZÓN 5!" },
+    { "start": 39.5, "duration": 5.2, "type": "reason", "text": "Mira un año atrás: ¿somos los mismos?\nCreo que somos mejores que antes.\nTe amo, te extraño y te deseo." },
+
+    { "start": 45.1, "duration": 0.9, "type": "number", "text": "RAZÓN 6!" },
+    { "start": 46.2, "duration": 4.2, "type": "reason", "text": "Eres la dueña de mis sueños,\nmis misterios y mis pensamientos." },
+
+    { "start": 50.8, "duration": 0.9, "type": "number", "text": "RAZÓN 7!" },
+    { "start": 51.9, "duration": 4.6, "type": "reason", "text": "Te ha dibujado un pincel de talento celestial,\na mi manera de ver nunca habría un rival." },
+
+    { "start": 56.9, "duration": 0.9, "type": "number", "text": "RAZÓN 8!" },
+    { "start": 58.0, "duration": 4.4, "type": "reason", "text": "Aceptas mis ráfagas de cursilerías, mis enojos,\ny entiendes mi forma de amar." },
+
+    { "start": 62.8, "duration": 16.0, "type": "flower", "text": "" },
+
+    { "start": 79.3, "duration": 0.9, "type": "number", "text": "RAZÓN 9!" },
+    { "start": 80.4, "duration": 3.6, "type": "reason", "text": "Tienes todo para ser buena mamá." },
+
+    { "start": 84.4, "duration": 0.6, "type": "number", "text": "CUENTA" },
+    { "start": 85.1, "duration": 0.6, "type": "number", "text": "1" },
+    { "start": 85.8, "duration": 0.6, "type": "number", "text": "2" },
+    { "start": 86.5, "duration": 0.6, "type": "number", "text": "3" },
+    { "start": 87.2, "duration": 0.6, "type": "number", "text": "4" },
+    { "start": 87.9, "duration": 0.6, "type": "number", "text": "5" },
+    { "start": 88.6, "duration": 0.6, "type": "number", "text": "6" },
+    { "start": 89.3, "duration": 0.6, "type": "number", "text": "7" },
+    { "start": 90.0, "duration": 0.6, "type": "number", "text": "8" },
+    { "start": 90.7, "duration": 0.8, "type": "number", "text": "9" },
+    { "start": 91.9, "duration": 2.2, "type": "reason", "text": "¡Nuestro primer <b>a</b>niversari<b>o</b>!" },
+    { "start": 94.4, "duration": 4.0, "type": "number", "text": "¡TE AMO!" }
 ]
